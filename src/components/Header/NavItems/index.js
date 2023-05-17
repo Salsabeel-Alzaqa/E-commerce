@@ -1,13 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import {ListItemButton , ListItem , ListItemText , Button } from '@mui/material';
+import { ListItemButton, ListItem, ListItemText, Button } from '@mui/material';
+import { pages } from "../data";
 const NavItems = ({ mobile}) => {
-    const pages = [
-    { text: 'HOME', link: '/' },
-    { text: 'BOOKS', link: '/books' },
-    { text: 'SALES', link: '/sales' },
-    { text: 'ABOUT US', link: '/about' },
-  ];
     return (
         <>
             {mobile ? (<>{pages.map((item,index) => (

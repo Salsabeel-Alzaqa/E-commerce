@@ -1,30 +1,26 @@
 import { React, useState } from "react";
-import { createTheme ,Box , Tooltip, Menu, MenuItem, Typography , IconButton} from '@mui/material';
+import { createTheme, Box, Tooltip, Menu, MenuItem, Typography, IconButton } from '@mui/material';
+import { settings } from "../data";
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-const settings = [
-    { text: 'Profile', link: '/Profile' },
-    { text: 'Cart', link: '/cart' },
-    { text: 'Logout', link: '/logout' },
-];
 const theme = createTheme({
-        Boxtheme:
+    Boxtheme:
     {
-            display:'flex',
+        display: 'flex',
         borderRadius: '33px',
-            justifyContent: 'center',
-            backgroundColor: 'white',
-            width:'90px',
-        }
+        justifyContent: 'center',
+        backgroundColor: 'white',
+        width: '90px',
+    }
 });
 const NavAccount = () => {
     const [anchorElUser, setAnchorElUser] = useState(null);
    
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
+    };
+    const handleCloseUserMenu = () => {
+        setAnchorElUser(null);
     };
     return (
         <Box sx={theme.Boxtheme}>
@@ -41,7 +37,7 @@ const NavAccount = () => {
                 </IconButton>
             </Tooltip>
             <Menu
-                sx={{ mt: '40px'}}
+                sx={{ mt: '40px' }}
                 id="menu-appbar"
                 anchorEl={anchorElUser}
                 anchorOrigin={{
