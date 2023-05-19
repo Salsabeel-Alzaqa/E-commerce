@@ -17,6 +17,8 @@ const Login = () => {
       const errors = {};
       if (!values.email) {
         errors.email = "Email is required";
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+        errors.email = "Invalid email address";
       }
       if (!values.password) {
         errors.password = "Password is required";
@@ -28,12 +30,9 @@ const Login = () => {
         const response = await axios.get("/users");
         const users = response.data;
         const user = users.find((u) => u.email === values.email);
-        if (!user) {
-          setFieldError("email", "User does not exist");
-          return;
-        }
-        if (user.password !== values.password) {
-          setFieldError("password", "Password incorrect");
+        if (!user || user.password !== values.password) {
+          setFieldError("email", "Email or password is incorrect");
+          setFieldError("password", "Email or password is incorrect");
           return;
         }
         localStorage.setItem("token", user.id);
