@@ -31,7 +31,6 @@ const Login = () => {
         const users = response.data;
         const user = users.find((u) => u.email === values.email);
         if (!user || user.password !== values.password) {
-          setFieldError("email", "Email or password is incorrect");
           setFieldError("password", "Email or password is incorrect");
           return;
         }
