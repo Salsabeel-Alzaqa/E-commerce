@@ -8,7 +8,7 @@ const FooterInfo = ({ text , icon , link }) => {
                     {text}
                 </Typography></Link>) : <Typography variant="body2" color="common.white" component="p"  sx={{ py:1}}>
                 {text}
-            </Typography>) : (<IconButton component="a" href={link} sx={{ color: "white",py:1}}>
+            </Typography>) : (<IconButton component="a" href={link} sx={{ color: "white",py:1 ,mt:3}}>
                 {icon}
             </IconButton>)}</>
     );

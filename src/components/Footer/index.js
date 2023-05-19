@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
-import { data } from './data';
+import { data } from '../../Data/data';
 import FooterTitle from './FooterTitle';
 import FooterInfo from './FooterInfo';
 const Footer = () => {
