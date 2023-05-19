@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { createTheme, Box, Tooltip, Menu, MenuItem, Typography, IconButton } from '@mui/material';
-import { settings } from "../data";
+import { settings } from "../../../Data/data";
+import { useNavigate } from "react-router-dom";
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const theme = createTheme({
@@ -15,12 +16,17 @@ const theme = createTheme({
 });
 const NavAccount = () => {
     const [anchorElUser, setAnchorElUser] = useState(null);
+    const navigate = useNavigate();
    
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
     };
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
+    };
+    const userLogout = () => {
+        localStorage.removeItem("token");
+        navigate("/login");
     };
     return (
         <Box sx={theme.Boxtheme}>
@@ -54,7 +60,7 @@ const NavAccount = () => {
             >
                 {settings.map((setting) => (
                     <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
-                        <Typography textAlign="center">{setting.text}</Typography>
+                        {setting.text === 'Logout' ? (<Typography textAlign="center" onClick={userLogout}>{setting.text}</Typography>):<Typography textAlign="center">{setting.text}</Typography>}
                     </MenuItem>
                 ))}
             </Menu>

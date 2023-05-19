@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { ListItemButton, ListItem, ListItemText, Button } from '@mui/material';
-import { pages } from "../data";
+import { pages } from "../../../Data/data";
 const NavItems = ({ mobile}) => {
     return (
         <>
