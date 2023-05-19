@@ -1,25 +1,36 @@
-import { Button , Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import Background from '../../components/Backgound'
+import Background from "../../components/Backgound";
+
 function AccessDenied() {
   const navigate = useNavigate();
-  const goToLoginPage = () => {
-    navigate("/login");
+
+  const handleClick = (path) => {
+    navigate(path);
   };
-  const goToSignupPage = () => {
-    navigate("/signup");
-  };
+
   return (
     <Background>
       <Stack spacing={2} direction="row" my={8}>
-      <Button variant="contained" fullWidth size="small" onClick={goToLoginPage}>
-        Login
-      </Button>
-      <Button variant="outlined" fullWidth size="small" onClick={goToSignupPage}>
-        SignUp
-      </Button>
+        <Button
+          variant="contained"
+          fullWidth
+          size="small"
+          onClick={() => handleClick("/login")}
+        >
+          Login
+        </Button>
+        <Button
+          variant="outlined"
+          fullWidth
+          size="small"
+          onClick={() => handleClick("/signup")}
+        >
+          SignUp
+        </Button>
       </Stack>
     </Background>
   );
 }
+
 export default AccessDenied;
