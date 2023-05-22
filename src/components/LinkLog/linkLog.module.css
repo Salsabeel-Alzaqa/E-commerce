@@ -1,0 +1,9 @@
+.link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.link.active {
+    color:#8145CE;
+}
