@@ -2,6 +2,9 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import delivery from "../assets/Services1.png";
+import customer from "../assets/Services2.png";
+import money from "../assets/Services3.png";
 export const data = [
     {
         "id": 1,
@@ -91,4 +94,9 @@ export const pages = [
     { text: 'BOOKS', link: '/books' },
     { text: 'SALES', link: '/sales' },
     { text: 'ABOUT US', link: '/about' },
+];
+export const services = [
+    { image: delivery, title: "FREE AND FAST DELIVERY", body: "Free delivery for all orders over $140" },
+    { image: customer, title: "24/7 CUSTOMER SERVICE", body: "Friendly 24/7 customer support" },
+    { image: money, title: "MONEY BACK GUARANTEE", body: "We reurn money within 30 days" },
 ];
