@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Login from "./Pages/Login";
 import Guard, { LoginGuard } from "./Pages/Guard";
+import SignUp from "./Pages/SignUp";
 
 const Router = () => {
   return (
@@ -23,6 +24,14 @@ const Router = () => {
           element={
             <LoginGuard>
               <Login />
+            </LoginGuard>
+          }
+        />
+         <Route
+          path="/signup"
+          element={
+            <LoginGuard>
+              <SignUp />
             </LoginGuard>
           }
         />

@@ -1558,25 +1558,26 @@
     }
   ],
   "users": [
-    { 
+    {
       "id": 1,
+      "fullName": "salsabeel alzaqa",
       "email": "salsabeel.alzaqa@gmail.com",
       "password": "salsabeel",
-      "firstName":"Salsabeel",
-      "lastName":"Alzaqa",
-      "phone":"+970595822464"
+      "phone": "+970595822464"
     }
   ],
-  "carts":[
+  "carts": [
     {
-      "id":1,
-      "userId":1,
-      "products":[]
-  }
+      "id": 1,
+      "userId": 1,
+      "products": []
+    }
   ],
-  "wishlists": [ {
-      "id":1,
-      "userId":1,
-      "products":[]
-  }]
+  "wishlists": [
+    {
+      "id": 1,
+      "userId": 1,
+      "products": []
+    }
+  ]
 }
