@@ -6,6 +6,7 @@ import {
 import Login from "./Pages/Login";
 import Guard, { LoginGuard } from "./Pages/Guard";
 import SignUp from "./Pages/SignUp";
+import Home from "./Pages/Home";
 
 const Router = () => {
   return (
@@ -15,7 +16,7 @@ const Router = () => {
           path="/"
           element={
             <Guard>
-              <div>Home page</div>
+              <Home />
             </Guard>
           }
         />
