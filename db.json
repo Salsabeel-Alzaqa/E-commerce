@@ -1558,13 +1558,25 @@
     }
   ],
   "users": [
-    {
-      "id": "12",
-      "firstName": "salsabeel",
-      "lastName": "Alzaqa",
+    { 
+      "id": 1,
       "email": "salsabeel.alzaqa@gmail.com",
-      "password": "%salsabeel123",
-      "phone": "+972595822464"
+      "password": "salsabeel",
+      "firstName":"Salsabeel",
+      "lastName":"Alzaqa",
+      "phone":"+970595822464"
     }
-  ]
+  ],
+  "carts":[
+    {
+      "id":1,
+      "userId":1,
+      "products":[]
+  }
+  ],
+  "wishlists": [ {
+      "id":1,
+      "userId":1,
+      "products":[]
+  }]
 }

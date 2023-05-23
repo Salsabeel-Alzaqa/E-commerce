@@ -1,9 +1,8 @@
-import './App.css';
-import Footer from './components/Footer';
+import Router from "./route";
 function App() {
   return (
     <>
-    <Footer />
+      <Router />
     </>
   );
 }
