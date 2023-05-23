@@ -1,11 +1,8 @@
-import './App.css';
-import Hero from './components/Hero';
-import Header from './components/Header';
+import Router from "./route";
 function App() {
   return (
     <>
-    <Header />
-    <Hero />
+      <Router />
     </>
   );
 }
