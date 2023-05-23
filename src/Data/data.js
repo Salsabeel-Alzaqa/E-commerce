@@ -96,7 +96,7 @@ export const pages = [
     { text: 'ABOUT US', link: '/about' },
 ];
 export const hero = [
+    { image: hero3 , link:"/books" },
+    { image: hero2 , link:"/sales"},
     { image: hero1 },
-    { image: hero2 },
-    { image: hero3 },
 ];

@@ -1,12 +1,11 @@
 import React from "react";
-import {Avatar } from "@mui/material";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
+import {Avatar} from "@mui/material";
+import ArrowBackSharpIcon from '@mui/icons-material/ArrowBackSharp';
 const PrevButton = ({ prev }) => {
   return (
       <>
-          <Avatar onClick={prev}>
-              <ArrowBackIcon/>
+          <Avatar sx={{ bgcolor: "#F5F5F5" }} onClick={prev} >
+              <ArrowBackSharpIcon sx={{ color:"black" }}/>
           </Avatar>
     </>
   );

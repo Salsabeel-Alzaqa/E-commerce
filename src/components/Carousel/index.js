@@ -1,21 +1,24 @@
-import React, { useRef } from "react";
+import React, { useRef} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// import NextButton from "../NextButton";
+// import PrevButton from "../PrevButton";
 import "./Carousel.css";
-function Carousel({ children }) {
+function Carousel({ children , dote , show , initial }) {
   const customeSlider = useRef();
   const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
+    dots: dote,
+    slidesToShow: show,
     slidesToScroll: 1,
+    infinite: true,
+    initialSlide: initial,
     responsive: [
       {
-        breakpoint: 1042,
+        breakpoint: 1440,
         settings: {
-          dots: true,
-          slidesToShow: 1,
+          dots: dote,
+          slidesToShow: show,
           slidesToScroll: 1,
           infinite: true
         }
@@ -23,17 +26,18 @@ function Carousel({ children }) {
     ]
   };
 
-  const gotoNext = () => {
-    customeSlider.current.slickNext();
-  };
+  // const gotoNext = () => {
+  //   customeSlider.current.slickNext();
+  // };
 
-  const gotoPrev = () => {
-    customeSlider.current.slickPrev();
-  };
+  // const gotoPrev = () => {
+  //   customeSlider.current.slickPrev();
+  // };
 
   return (
     <>
-          {/* <CarouselButtons prev={gotoPrev} next={gotoNext} /> */}
+      {/* <NextButton next={gotoNext} />
+      <PrevButton prev={gotoPrev} /> */}
       <Slider {...settings} ref={customeSlider}>
         {children}
       </Slider>
