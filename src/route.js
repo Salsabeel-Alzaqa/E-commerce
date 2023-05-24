@@ -7,6 +7,7 @@ import Login from "./Pages/Login";
 import About from "./Pages/About";
 import Layout from "./Pages/Layout";
 import Guard, { LoginGuard } from "./Pages/Guard";
+import SignUp from "./Pages/SignUp";
 
 const Router = () => {
   return (
@@ -25,6 +26,14 @@ const Router = () => {
           element={
             <LoginGuard>
               <Login />
+            </LoginGuard>
+          }
+        />
+         <Route
+          path="/signup"
+          element={
+            <LoginGuard>
+              <SignUp />
             </LoginGuard>
           }
         />
