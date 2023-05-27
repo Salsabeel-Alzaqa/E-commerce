@@ -13,14 +13,14 @@ const StyledButton = styled(Button)({
 });
 const StyledSecButton = styled(Button)({
   position: "absolute",
-  top: "80%",
+  top: "70%",
   left: "6%",
 });
 
 function Hero() {
   return (
     <Box>
-      <Carousel dote={true} show={1} initial={1} >
+      <Carousel dote={true} show={1} initial={1} Rshow={1} center={false} Rarrow={false} arrows={false} >
         {hero.map((item, index) => (
           <Box key={index} sx={{ position: "relative" }}>
           <img src={item.image} alt="heroImage" />
