@@ -7,7 +7,7 @@ const Services = () => {
             {services.map((items, index) => {
                 return (
                     <Grid item xs={12} sm={3} key={index} mx={4}>
-                        <img src={items.image} alt="serviceImage" />
+                        <img src={items.image} alt="serviceImage" style={{width:"40%"}}/>
                         <Typography variant="h6"pt={4}>{items.title}</Typography>
                         <Typography variant="body2">{items.body}</Typography>
                     </Grid>)
