@@ -9,6 +9,7 @@ import Books from "./Pages/Books";
 import Layout from "./Pages/Layout";
 import Guard, { LoginGuard } from "./Pages/Guard";
 import SignUp from "./Pages/SignUp";
+import Home from "./Pages/Home";
 
 const Router = () => {
   return (
@@ -17,7 +18,7 @@ const Router = () => {
          <Route path="/" element={<Guard><Layout /></Guard>}>
             <Route index element={
             <Guard>
-              <div>Home page</div>
+              <Home />
             </Guard>
           } />
           <Route path="/about" element={<Guard><About /></Guard>} />
