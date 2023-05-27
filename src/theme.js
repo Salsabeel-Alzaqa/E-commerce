@@ -19,7 +19,8 @@ const theme = createTheme({
         },
         customColor: {
             main: '#FAFAFA',
-            last: '#4D4D4D'
+            last: '#4D4D4D',
+            sec:'#5A595C'
         },
     },
 });
