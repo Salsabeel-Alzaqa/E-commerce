@@ -16,7 +16,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.21",
+        "rate": 4.21,
         "count": "85,547"
       },
       "discount": 50
@@ -37,8 +37,8 @@
           "two": 7,
           "one": 1
         },
-        "rate": "3.77",
-        "count": "18,659 "
+        "rate": 3.77,
+        "count": "18,659"
       },
       "discount": 30
     },
@@ -58,10 +58,10 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.25",
+        "rate": 4.25,
         "count": "1,026,936"
       },
-      "trending": true
+      "trending": false
     },
     {
       "id": 4,
@@ -79,7 +79,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "3.98",
+        "rate": 3.98,
         "count": "662,961"
       },
       "bestseller": false,
@@ -101,7 +101,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.26",
+        "rate": 4.26,
         "count": "1,388,156"
       },
       "bestseller": false,
@@ -123,7 +123,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "4.16",
+        "rate": 4.16,
         "count": "136,304"
       },
       "bestseller": true,
@@ -145,7 +145,7 @@
           "two": 10,
           "one": 10
         },
-        "rate": "3.63",
+        "rate": 3.63,
         "count": "6,162,667"
       },
       "discount": 50,
@@ -167,7 +167,7 @@
           "two": 1,
           "one": 1
         },
-        "rate": "4.62",
+        "rate": 4.62,
         "count": "3,470,769"
       },
       "bestseller": true
@@ -188,7 +188,7 @@
           "two": 3,
           "one": 2
         },
-        "rate": "4.28",
+        "rate": 4.28,
         "count": "3,665,154"
       },
       "bestseller": true,
@@ -211,7 +211,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.07",
+        "rate": 4.07,
         "count": "783,822"
       },
       "bestseller": true,
@@ -234,7 +234,7 @@
           "two": 7,
           "one": 1
         },
-        "rate": "3.67",
+        "rate": 3.67,
         "count": "293,567"
       },
       "bestseller": false,
@@ -256,7 +256,7 @@
           "two": 1,
           "one": 1
         },
-        "rate": "4.33",
+        "rate": 4.33,
         "count": "561,164"
       },
       "bestseller": true,
@@ -279,7 +279,7 @@
           "two": 1,
           "one": 1
         },
-        "rate": "4.37",
+        "rate": 4.37,
         "count": "502,289"
       }
     },
@@ -299,7 +299,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "4.08",
+        "rate": 4.08,
         "count": "909,225"
       },
       "trending": true
@@ -320,7 +320,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.14",
+        "rate": 4.14,
         "count": "425,386"
       },
       "bestseller": true,
@@ -343,7 +343,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.23",
+        "rate": 4.23,
         "count": "199,358"
       },
       "discount": 40,
@@ -365,7 +365,7 @@
           "two": 4,
           "one": 3
         },
-        "rate": "4.25",
+        "rate": 4.25,
         "count": "991,233"
       },
       "discount": 10
@@ -386,7 +386,7 @@
           "two": 1,
           "one": 1
         },
-        "rate": "4.53",
+        "rate": 4.53,
         "count": "49,820"
       },
       "bestseller": true,
@@ -409,7 +409,7 @@
           "two": 2,
           "one": 2
         },
-        "rate": "4.43",
+        "rate": 4.43,
         "count": "48,848"
       },
       "bestseller": false,
@@ -431,7 +431,7 @@
           "two": 3,
           "one": 2
         },
-        "rate": "4.41",
+        "rate": 4.41,
         "count": "194,497"
       },
       "bestseller": false,
@@ -454,7 +454,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.47",
+        "rate": 4.47,
         "count": "216,910"
       },
       "bestseller": false,
@@ -477,7 +477,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": "4.25",
+        "rate": 4.25,
         "count": "169,321"
       },
       "bestseller": false,
@@ -500,7 +500,7 @@
           "two": 3,
           "one": 2
         },
-        "rate": "4.36",
+        "rate": 4.36,
         "count": "112,985"
       },
       "bestseller": false,
@@ -522,7 +522,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.36",
+        "rate": 4.36,
         "count": "70,948"
       },
       "bestseller": false,
@@ -544,7 +544,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.42",
+        "rate": 4.42,
         "count": "130,697"
       },
       "bestseller": false,
@@ -567,7 +567,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.46",
+        "rate": 4.46,
         "count": "277,379"
       },
       "bestseller": true,
@@ -590,7 +590,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.47",
+        "rate": 4.47,
         "count": "124,955"
       },
       "bestseller": true,
@@ -613,7 +613,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.18",
+        "rate": 4.18,
         "count": "1,537,334"
       },
       "bestseller": true,
@@ -635,7 +635,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.36",
+        "rate": 4.36,
         "count": "1,871,517"
       },
       "bestseller": false,
@@ -658,7 +658,7 @@
           "two": 9,
           "one": 2
         },
-        "rate": "3.63",
+        "rate": 3.63,
         "count": "257,910"
       },
       "bestseller": false,
@@ -680,14 +680,14 @@
           "two": 6,
           "one": 3
         },
-        "rate": "3.92",
+        "rate": 3.92,
         "count": "22,848 "
       },
       "bestseller": false,
       "trending": false
     },
     {
-      "id": "32",
+      "id": 32,
       "name": "The Happiness Hypothesis",
       "author": "Jonathan Haidt",
       "price": 15.95,
@@ -702,7 +702,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": "4.10",
+        "rate": 4.10,
         "count": "36,731"
       },
       "bestseller": false,
@@ -725,7 +725,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.16",
+        "rate": 4.16,
         "count": "5,304"
       },
       "bestseller": false,
@@ -747,7 +747,7 @@
           "two": 9,
           "one": 2
         },
-        "rate": "3.66",
+        "rate": 3.66,
         "count": "10,009"
       },
       "bestseller": false,
@@ -769,7 +769,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "3.95",
+        "rate": 3.95,
         "count": "142,805"
       },
       "bestseller": true,
@@ -792,7 +792,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "4.07",
+        "rate": 4.07,
         "count": "530"
       },
       "bestseller": false,
@@ -815,7 +815,7 @@
           "two": 5,
           "one": 1
         },
-        "rate": "3.96",
+        "rate": 3.96,
         "count": "570,613"
       },
       "bestseller": true,
@@ -838,7 +838,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.06",
+        "rate": 4.06,
         "count": "201"
       },
       "bestseller": false,
@@ -861,7 +861,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "4.10",
+        "rate": 4.10,
         "count": "74,404"
       },
       "bestseller": false,
@@ -883,7 +883,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": "4.12",
+        "rate": 4.12,
         "count": "2,877,147"
       },
       "bestseller": false,
@@ -906,7 +906,7 @@
           "two": 5,
           "one": 2
         },
-        "rate": "3.95",
+        "rate": 3.95,
         "count": "2,732,116"
       },
       "bestseller": false,
@@ -928,7 +928,7 @@
           "two": 7,
           "one": 3
         },
-        "rate": "3.84",
+        "rate": 3.84,
         "count": "2,268,772"
       },
       "bestseller": false,
@@ -950,7 +950,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": "4.01",
+        "rate": 4.01,
         "count": "930,801"
       },
       "bestseller": false,
@@ -973,7 +973,7 @@
           "two": 9,
           "one": 2
         },
-        "rate": "3.59",
+        "rate": 3.59,
         "count": "364,913"
       },
       "bestseller": false,
@@ -996,7 +996,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "3.95",
+        "rate": 3.95,
         "count": "702,196"
       },
       "bestseller": true,
@@ -1018,7 +1018,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": "4.04",
+        "rate": 4.04,
         "count": "280,568"
       },
       "bestseller": false,
@@ -1040,7 +1040,7 @@
           "two": 6,
           "one": 2
         },
-        "rate": "4.01",
+        "rate": 4.01,
         "count": "345,037"
       },
       "bestseller": false,
@@ -1062,7 +1062,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.13",
+        "rate": 4.13,
         "count": "43,251"
       },
       "bestseller": false,
@@ -1084,7 +1084,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.17",
+        "rate": 4.17,
         "count": "169,702"
       },
       "bestseller": false,
@@ -1106,7 +1106,7 @@
           "two": 6,
           "one": 1
         },
-        "rate": "3.82",
+        "rate": 3.82,
         "count": "353,126"
       },
       "bestseller": false,
@@ -1128,7 +1128,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.26",
+        "rate": 4.26,
         "count": "821,666"
       },
       "bestseller": true,
@@ -1150,7 +1150,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.36",
+        "rate": 4.36,
         "count": "305,138"
       },
       "bestseller": false,
@@ -1172,7 +1172,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.20",
+        "rate": 4.20,
         "count": "167,283"
       },
       "bestseller": true,
@@ -1194,7 +1194,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "4.01",
+        "rate": 4.01,
         "count": "101,144"
       },
       "bestseller": false,
@@ -1216,7 +1216,7 @@
           "two": 3,
           "one": 2
         },
-        "rate": "4.28",
+        "rate": 4.28,
         "count": "3,947,663"
       },
       "bestseller": true,
@@ -1239,7 +1239,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": "4.08",
+        "rate": 4.08,
         "count": "1,130,773"
       },
       "bestseller": false,
@@ -1261,7 +1261,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": "4.04",
+        "rate": 4.04,
         "count": "824,051"
       },
       "bestseller": false,
@@ -1283,7 +1283,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.15",
+        "rate": 4.15,
         "count": "654,165"
       },
       "bestseller": false,
@@ -1306,7 +1306,7 @@
           "two": 6,
           "one": 2
         },
-        "rate": "3.93",
+        "rate": 3.93,
         "count": "4,843,990"
       },
       "bestseller": false,
@@ -1328,7 +1328,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.27",
+        "rate": 4.27,
         "count": "5,695,816"
       },
       "bestseller": true,
@@ -1350,7 +1350,7 @@
           "two": 9,
           "one": 2
         },
-        "rate": "4.01",
+        "rate": 4.01,
         "count": "962,322"
       },
       "bestseller": false,
@@ -1372,7 +1372,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.24",
+        "rate": 4.24,
         "count": "1,105,566"
       },
       "bestseller": false,
@@ -1395,7 +1395,7 @@
           "two": 6,
           "one": 1
         },
-        "rate": "3.95",
+        "rate": 3.95,
         "count": "841,048"
       },
       "bestseller": false,
@@ -1417,7 +1417,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.30",
+        "rate": 4.30,
         "count": "281,110"
       },
       "bestseller": false,
@@ -1440,7 +1440,7 @@
           "two": 2,
           "one": 1
         },
-        "rate": "4.28",
+        "rate": 4.28,
         "count": "301,170"
       },
       "bestseller": false,
@@ -1462,7 +1462,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.21",
+        "rate": 4.21,
         "count": "809,826"
       },
       "bestseller": false,
@@ -1484,7 +1484,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": "4.26",
+        "rate": 4.26,
         "count": "2,460,054"
       },
       "bestseller": true,
@@ -1506,7 +1506,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": "4.15",
+        "rate": 4.15,
         "count": "4,767,992"
       },
       "bestseller": false,
@@ -1528,7 +1528,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": "4.26",
+        "rate": 4.26,
         "count": "1,513,029"
       },
       "bestseller": false,
@@ -1550,7 +1550,7 @@
           "two": 5,
           "one": 3
         },
-        "rate": "4.14",
+        "rate": 4.14,
         "count": "1,597,100"
       },
       "bestseller": false,
