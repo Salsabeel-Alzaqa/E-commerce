@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Login from "./Pages/Login";
 import About from "./Pages/About";
+import Books from "./Pages/Books";
 import Layout from "./Pages/Layout";
 import Guard, { LoginGuard } from "./Pages/Guard";
 import SignUp from "./Pages/SignUp";
@@ -19,7 +20,8 @@ const Router = () => {
               <div>Home page</div>
             </Guard>
           } />
-         <Route path="/about" element={<Guard><About /></Guard>} />
+          <Route path="/about" element={<Guard><About /></Guard>} />
+          <Route path="/books" element={<Guard><Books /></Guard>} />
           </Route>
         <Route
           path="/login"
