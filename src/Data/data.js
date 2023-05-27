@@ -2,6 +2,9 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import hero1 from "../assets/hero.png";
+import hero2 from "../assets/hero2.png";
+import hero3 from "../assets/hero3.png";
 import delivery from "../assets/Services1.png";
 import customer from "../assets/Services2.png";
 import money from "../assets/Services3.png";
@@ -94,6 +97,11 @@ export const pages = [
     { text: 'BOOKS', link: '/books' },
     { text: 'SALES', link: '/sales' },
     { text: 'ABOUT US', link: '/about' },
+];
+export const hero = [
+    { image: hero3 , link:"/books" },
+    { image: hero2 , link:"/sales"},
+    { image: hero1 },
 ];
 export const services = [
     { image: delivery, title: "FREE AND FAST DELIVERY", body: "Free delivery for all orders over $140" },
