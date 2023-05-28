@@ -15,4 +15,5 @@ function Stars({value , count}){
         </Box>
     );
 }
+
 export default Stars;
