@@ -1,25 +1,22 @@
 import React from 'react';
 import Chip from '@mui/material/Chip';
-import { makeStyles } from '@mui/styles';
-const useStyles = makeStyles((theme) => ({
-  bestseller: {
-    backgroundColor: '#FFAD33',
-    color: 'black',
+import { styled } from '@mui/system';
+
+const StyledChip = styled(Chip)(({ theme }) => ({
+  '&.bestseller': {
+    backgroundColor:'#FFAD33',
+    color: theme.palette.secondary.main,
   },
-  genre: {
-    backgroundColor: 'rgba(129, 69, 206, 0.27)',
-    color: '#8145CE',
+  '&.genre': {
+    backgroundColor:'rgba(129, 69, 206, 0.27)',
+    color: theme.palette.primary.main,
   },
-  discount: {
-    backgroundColor: 'rgba(188, 10, 10, 0.67)',
-    color: 'black',
+  '&.discount': {
+    backgroundColor:'rgba(188, 10, 10, 0.67)',
+    color: theme.palette.secondary.main,
   },
 }));
-function Chips({ text, name }) {
-    const classes = useStyles();
-  const chipClassName = name && classes[name] ? classes[name] : '';
-    return (
-        <Chip label={text} className={chipClassName} />
-    );
-};
+const Chips = ({ text, name }) => {
+    return <StyledChip label={text} className={name} />;
+}
 export default Chips;

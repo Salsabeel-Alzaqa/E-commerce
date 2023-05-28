@@ -15,4 +15,5 @@ const BookImage = ({image}) =>{
      <Image src={image} />
   );
 }
+
 export default BookImage;

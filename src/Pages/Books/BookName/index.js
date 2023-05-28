@@ -1,8 +1,8 @@
+import React from "react";
 import { Typography } from "@mui/material";
 import { styled } from '@mui/system';
 
-import React from "react";
-const NmeTypography = styled(Typography)`
+const TitleTypography = styled(Typography)`
   font-family: Poppins;
   font-size: 35px;
   font-weight: 600;
@@ -12,9 +12,9 @@ const NmeTypography = styled(Typography)`
 `;
 const BookName = ({ name }) => {
     return (
-        <NmeTypography>
+        <TitleTypography>
             {name}
-        </NmeTypography>
+        </TitleTypography>
     );
 };
 export default BookName;
