@@ -1570,19 +1570,11 @@
     {
       "id": 1,
       "userId": "1",
-      "products": [
-        {
-          "id": 1,
-          "name": "Never Lie",
-          "author": "Freida McFadden",
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661428846i/62080187.jpg",
-          "price": 9.95,
-          "quantity": 1,
-          "total": 9.95
-        }
-      ],
-      "items": 1,
-      "alltotal": 9.95
+      "products": [],
+      "items": 0,
+      "subtotal": 0,
+      "totaldiscount": 0,
+      "alltotal": 0
     }
   ],
   "wishlists": [

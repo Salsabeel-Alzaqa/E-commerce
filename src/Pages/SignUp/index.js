@@ -46,7 +46,7 @@ const SignUp = () => {
       }
       return errors;
     },
-    onSubmit: async (values , { resetForm }) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
         const userResponse = await axios.post('/users', {
           fullName: values.fullName,
@@ -59,6 +59,8 @@ const SignUp = () => {
             userId: userResponse.data.id,
             products: [],
             items: 0,
+            subtotal: 0,
+            totaldiscount: 0,
             alltotal: 0
           }),
           axios.post('/wishlists', {
@@ -67,7 +69,7 @@ const SignUp = () => {
             items: 0
           })
         ]);
-      resetForm();
+        resetForm();
       } catch (error) {
         console.error('Registration error:', error);
       }
