@@ -1,5 +1,5 @@
 import React from "react";
-import {Stack , Grid , Box} from '@mui/material';
+import {Stack , Grid } from '@mui/material';
 import BookImage from '../BookImage';
 import Chips from "../../../components/Chips";
 import Stars from '../../../components/Stars';
@@ -16,7 +16,7 @@ const LastGrid = ({ theme }) => ({
   },
 });
 
-const BooksList = ({image , Genre , author , bestseller ,rating , name ,description , price , discount , id , item}) =>{
+const BooksList = ({image , Genre , author , bestseller ,rating , name ,description , price , discount , id }) =>{
     return (
         <Grid container spacing={0}>
             <Grid item xs={12} sm={4}>
@@ -57,7 +57,7 @@ const BooksList = ({image , Genre , author , bestseller ,rating , name ,descript
                             <FavoriteButton name={name} author={author} rating={rating} id={id} price={price} discount={discount} image={image} bestseller={bestseller} description={description} Genre={Genre}  />
                         </Grid>
                         <Grid item xs={6}>
-                            <AddToCart image={image} author={author} name={name} price={price} quantity={1} id={id} />
+                            <AddToCart image={image} author={author} name={name} price={price} quantity={1} id={id} discount={discount}/>
                         </Grid>
                     </Grid>
                 </Grid>
