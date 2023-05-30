@@ -49,6 +49,7 @@ const theme = createTheme({
         },
         secondary: {
             main: '#000000',
+            last:'#BC0A0A'
            
         },
         customColor: {
