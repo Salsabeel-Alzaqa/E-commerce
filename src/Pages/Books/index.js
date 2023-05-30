@@ -69,8 +69,8 @@ function Books({ title }) {
     setCurrentPage(1);
   }, []);
 
-  const handleGenreChange = useCallback((selectedGenre) => {
-    setSelectedGenre(selectedGenre);
+  const handleGenreChange = useCallback((event) => {
+    setSelectedGenre(event.target.value);
     setCurrentPage(1);
   }, []);
 
