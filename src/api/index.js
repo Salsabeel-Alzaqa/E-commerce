@@ -1,6 +1,4 @@
 import axios from "../axios";
-import {calculateTotal , calculateTotalDiscountPercentage} from "../utils/cartUtils"
-
 export const fetchData = async (path,updateData) => {
   try {
       const response = await axios.get(path);
