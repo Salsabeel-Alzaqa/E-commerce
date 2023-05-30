@@ -14,6 +14,7 @@ import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
 import BookDetails from "./Pages/BookDetails";
 
+
 const Router = () => {
   return (
     <BrowserRouter>
