@@ -1,8 +1,23 @@
-import React from 'react';
-import { Typography, Grid } from '@mui/material';
+import React, { useState } from 'react';
+import { Typography, Grid, MenuItem, Select, InputLabel} from '@mui/material';
 import Search from '../../../components/Search';
+import { styled } from '@mui/system';
+import { genresData } from '../../../Data/data';
 
-function BooksHeader({ title, handleSearch }) {
+const StyledSelect = styled(Select)`
+  border-radius: 40px;
+  height: 49px;
+  width: 25%;
+  color: #8145CE;
+`;
+
+function BooksHeader({ title, handleSearch, handleGenreChange }) {
+  const [genre, setGenry] = useState('');
+
+  const handleChange = (event) => {
+      setGenry(event.target.value);
+      handleGenreChange(event.target.value);
+  };
   return (
     <Grid container my={4} spacing={2}>
       <Grid item xs={12} sm={6} md={4}>
@@ -12,9 +27,23 @@ function BooksHeader({ title, handleSearch }) {
         <Search handleSearch={handleSearch} />
       </Grid>
       <Grid item xs={12} md={4}>
-        <Typography variant="body1">Item 3</Typography>
+        <StyledSelect
+          value={genre}
+          onChange={handleChange}
+          inputProps={{ 'aria-label': 'Without label' }}
+        >
+          <MenuItem value="all" >
+            <em>All Genres</em>
+          </MenuItem>
+          {genresData.map((genre, index) => (
+            <MenuItem key={index} value={genre.text}>
+              {genre.text}
+            </MenuItem>
+          ))}
+        </StyledSelect>
       </Grid>
     </Grid>
   );
 }
+
 export default BooksHeader;
