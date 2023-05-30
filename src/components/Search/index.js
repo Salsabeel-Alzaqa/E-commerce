@@ -13,7 +13,7 @@ const Search = ({ handleSearch }) => {
     handleSearch(event.target.value);
   };
     return (
-        <StyledOutlinedInput placeholder="Please enter text" onChange={handleChange} 
+        <StyledOutlinedInput placeholder="Search ..." onChange={handleChange} 
             endAdornment={<InputAdornment position="end"><SearchIcon color="primary" /></InputAdornment>} />
   );
 };
