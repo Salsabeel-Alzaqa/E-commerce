@@ -1,9 +1,15 @@
 import { Typography, IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
-const FooterInfo = ({ text , icon , link }) => {
+import { useNavigate } from "react-router-dom";
+const FooterInfo = ({ text, icon, link }) => {
+    const navigate = useNavigate();
+    const userLogout = () => {
+        localStorage.removeItem("token");
+        navigate("/login");
+    };
     return (
         <>{text ? (
-            link ? (<Link style={{ textDecoration: "none" }} to={link}>
+            link ? text === 'Logout' ? <Typography variant="body2" color="common.white" component="p" sx={{ py: 1 }} onClick={userLogout}>{text}</Typography>: (<Link style={{ textDecoration: "none" }} to={link}>
                 <Typography variant="body2" color="common.white" component="p" sx={{ py:1}}>
                     {text}
                 </Typography></Link>) : <Typography variant="body2" color="common.white" component="p"  sx={{ py:1}}>
