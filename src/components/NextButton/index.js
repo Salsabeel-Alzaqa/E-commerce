@@ -4,7 +4,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const NextButton = ({ next }) => {
   return (
       <>
-          <Avatar sx={{ bgcolor: "#8145CE" }} onClick={next} className="prev">
+          <Avatar sx={{ bgcolor: "#8145CE" }} onClick={next} className="next">
               <ArrowForwardIcon sx={{ color:"black" }}/>
           </Avatar>
     </>

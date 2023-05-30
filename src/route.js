@@ -10,6 +10,7 @@ import Guard, { LoginGuard } from "./Pages/Guard";
 import SignUp from "./Pages/SignUp";
 import Home from "./Pages/Home";
 
+
 const Router = () => {
   return (
     <BrowserRouter>
