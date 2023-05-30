@@ -8,7 +8,8 @@ import About from "./Pages/About";
 import Layout from "./Pages/Layout";
 import Guard, { LoginGuard } from "./Pages/Guard";
 import SignUp from "./Pages/SignUp";
-import Trending from "./components/Trending";
+import Home from "./Pages/Home";
+
 
 const Router = () => {
   return (
@@ -17,8 +18,7 @@ const Router = () => {
          <Route path="/" element={<Guard><Layout /></Guard>}>
             <Route index element={
             <Guard>
-              <div>Home page</div>
-              <Trending />
+              <Home />
             </Guard>
           } />
          <Route path="/about" element={<Guard><About /></Guard>} />
