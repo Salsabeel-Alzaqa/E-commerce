@@ -1,10 +1,11 @@
 import React from "react";
 import Hero from "../../components/Hero";
-import Header from "../../components/Header";
+import Trending from "../../components/Trending";
 function Home() {
     return (
         <>
             <Hero />
+            <Trending />
         </>
     );
 }
