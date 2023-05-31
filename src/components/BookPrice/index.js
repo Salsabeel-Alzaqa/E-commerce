@@ -12,7 +12,7 @@ const BookPrice = ({ discount, price }) => {
     return (
         <Box display="flex" >
             {discount ? (<>
-                <Typography variant="h5" color="secondary.main"> ${discountPrice}</Typography>
+                <Typography variant="h5" color="secondary.main"> ${(discountPrice).toFixed(2)}</Typography>
                 <DiscountText variant="caption" color="customColor.sec">${price}</DiscountText>
             </>) : (<Typography variant="h5" color="secondary.main"> ${price}</Typography>)}
         </Box>

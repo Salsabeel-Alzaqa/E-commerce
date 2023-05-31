@@ -23,7 +23,9 @@ const Router = () => {
             </Guard>
           } />
           <Route path="/about" element={<Guard><About /></Guard>} />
-          <Route path="/books" element={<Guard><Books /></Guard>} />
+          <Route path="/books" element={<Guard><Books title="BOOKS"/></Guard>} />
+          <Route path="/sales" element={<Guard><Books title="FLASH SALE"/></Guard>} />
+          <Route path="/bestseller" element={<Guard><Books title="BEST SELLER"/></Guard>} />
           </Route>
         <Route
           path="/login"
