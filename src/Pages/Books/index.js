@@ -5,24 +5,26 @@ import BooksList from './BooksList';
 import BooksPaginator from './BooksPaginator';
 import BooksLoader from './BooksLoader';
 import BooksHeader from './BooksHeader';
-import {fetchData} from "../../api";
+import { fetchData } from "../../api";
+
 function Books({ title }) {
   const [loading, setLoading] = useState(true);
   const [books, setBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5; 
+  const itemsPerPage = 5;
   const [filteredBooks, setFilteredBooks] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedGenre, setSelectedGenre] = useState('');
 
   useEffect(() => {
     try {
-      const path = 'books';
+      const path = '/books';
       fetchData(path, setBooks);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -34,21 +36,25 @@ function Books({ title }) {
         name.toLowerCase().includes(searchTermLowerCase)
       );
     });
-
     let filteredByTitle = filtered;
     if (title === 'BEST SELLER') {
       filteredByTitle = filtered.filter((book) => book.bestseller);
     } else if (title === 'FLASH SALE') {
       filteredByTitle = filtered.filter((book) => book.discount);
     }
-
+    // Filter by genre
+    if (selectedGenre !== 'all') {
+      filteredByTitle = filteredByTitle.filter((book) =>
+        book.Genre.includes(selectedGenre)
+      );
+    }
     setFilteredBooks(filteredByTitle);
-  }, [books, searchTerm, title]);
+  }, [books, searchTerm, title, selectedGenre]);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-const displayedBooks = useMemo(() => {
+  const displayedBooks = useMemo(() => {
     return filteredBooks.slice(startIndex, endIndex);
   }, [filteredBooks, startIndex, endIndex]);
 
@@ -63,11 +69,20 @@ const displayedBooks = useMemo(() => {
     setCurrentPage(1);
   }, []);
 
+  const handleGenreChange = useCallback((event) => {
+    setSelectedGenre(event.target.value);
+    setCurrentPage(1);
+  }, []);
+
   return (
     <>
       <LinkLog />
       <Container maxWidth="xl">
-        <BooksHeader title={title} handleSearch={handleSearch} />
+        <BooksHeader
+          title={title}
+          handleSearch={handleSearch}
+          handleGenreChange={handleGenreChange}
+        />
         {loading ? (
           <BooksLoader />
         ) : (

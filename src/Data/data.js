@@ -115,3 +115,12 @@ export const cartColumns = [
     { text: "Total" },
     { text: " " },
 ];
+export const genresData = [
+    { text: 'horror' },
+    { text: 'fantasy' },
+    { text: 'manga' },
+    { text: 'psychology' },
+    { text: 'crime' },
+    { text: 'classics' },
+    { text: 'rommance' }
+];
