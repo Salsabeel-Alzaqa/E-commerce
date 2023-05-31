@@ -68,7 +68,7 @@ const AddToCart = ({ image, author, name, price, quantity, id, discount }) => {
       <SnackbarAlert
         open={isProductExistsAlertOpen}
         onClose={handleAlertClose}
-        message="Product already exists in the cart."
+        message={`Product already exists in the cart.Now you have ${isProductInCart()} ^o^`}
       />
     </>
   );

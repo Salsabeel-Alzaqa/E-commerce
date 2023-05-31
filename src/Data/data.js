@@ -122,5 +122,5 @@ export const genresData = [
     { text: 'psychology' },
     { text: 'crime' },
     { text: 'classics' },
-    { text: 'rommance' }
+    { text: 'rommance' },
 ];
