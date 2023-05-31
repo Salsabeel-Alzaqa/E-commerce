@@ -1,8 +1,10 @@
 import React from "react";
-import Carousel from "../Carousel";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { hero } from "../../Data/data";
 import { Box, Button } from "@mui/material";
-import "./Hero.css";
+import styles from "./Hero.module.css";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
 
@@ -18,9 +20,28 @@ const StyledSecButton = styled(Button)({
 });
 
 function Hero() {
+  const settings = {
+    dots: true,
+     dotsClass: `slick-dots ${styles.customDots}`,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    initialSlide: 1,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          dots: true,
+          slidesToShow:1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      }
+    ]
+  };
   return (
-    <Box>
-      <Carousel dote={true} show={1} initial={1} Rshow={1} center={false} Rarrow={false} arrows={false} >
+    <Box className={styles.myHeroSlider}>
+      <Slider {...settings} className={styles.Slider}>
         {hero.map((item, index) => (
           <Box key={index} sx={{ position: "relative" }}>
           <img src={item.image} alt="heroImage" />
@@ -29,7 +50,7 @@ function Hero() {
             }
           </Box>
         ))}
-      </Carousel>
+      </Slider>
     </Box>
   );
 }
