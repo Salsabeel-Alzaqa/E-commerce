@@ -1,14 +1,17 @@
-.slick-dots {
+.Slider {
+    overflow: hidden;
+} 
+.myHeroSlider .customDots {
     top: 94.5%;
     left: 2%;
 }
 
-.slick-dots li {
+.myHeroSlider .customDots li {
     position: relative;
     margin-right: 60px;
 }
 
-.slick-dots li button::before {
+.myHeroSlider .customDots li button::before {
     position: absolute;
     width: 70px;
     height: 5px;
@@ -17,6 +20,6 @@
     background-color: white;
 }
 
-img {
+.myHeroSlider img {
     width: 100%;
 }
