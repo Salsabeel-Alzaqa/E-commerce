@@ -702,7 +702,7 @@
           "two": 4,
           "one": 2
         },
-        "rate": 4.10,
+        "rate": 4.1,
         "count": "36,731"
       },
       "bestseller": false,
@@ -861,7 +861,7 @@
           "two": 4,
           "one": 1
         },
-        "rate": 4.10,
+        "rate": 4.1,
         "count": "74,404"
       },
       "bestseller": false,
@@ -1172,7 +1172,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": 4.20,
+        "rate": 4.2,
         "count": "167,283"
       },
       "bestseller": true,
@@ -1417,7 +1417,7 @@
           "two": 3,
           "one": 1
         },
-        "rate": 4.30,
+        "rate": 4.3,
         "count": "281,110"
       },
       "bestseller": false,
@@ -1559,25 +1559,25 @@
   ],
   "users": [
     {
-      "id": 1,
-      "fullName": "salsabeel alzaqa",
+      "fullName": "salsabeel",
       "email": "salsabeel.alzaqa@gmail.com",
       "password": "salsabeel",
-      "phone": "+970595822464"
+      "phone": "0595822464",
+      "id": 1
     }
   ],
   "carts": [
     {
-      "id": 1,
       "userId": 1,
-      "products": []
+      "products": [],
+      "id": 1
     }
   ],
   "wishlists": [
     {
-      "id": 1,
       "userId": 1,
-      "products": []
+      "products": [],
+      "id": 1
     }
   ]
 }

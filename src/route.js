@@ -9,7 +9,7 @@ import Layout from "./Pages/Layout";
 import Guard, { LoginGuard } from "./Pages/Guard";
 import SignUp from "./Pages/SignUp";
 import Home from "./Pages/Home";
-
+import Profile from "./Pages/Profile";
 
 const Router = () => {
   return (
@@ -21,7 +21,8 @@ const Router = () => {
               <Home />
             </Guard>
           } />
-         <Route path="/about" element={<Guard><About /></Guard>} />
+          <Route path="/about" element={<Guard><About /></Guard>} />
+          <Route path="/profile" element={<Guard><Profile /></Guard>} />
           </Route>
         <Route
           path="/login"
