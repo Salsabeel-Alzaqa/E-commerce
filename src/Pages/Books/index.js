@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import axios from '../../axios';
 import { Box, Container } from '@mui/material';
 import LinkLog from '../../components/LinkLog';
 import BooksList from './BooksList';
 import BooksPaginator from './BooksPaginator';
 import BooksLoader from './BooksLoader';
 import BooksHeader from './BooksHeader';
-
+import {fetchData} from "../../api";
 function Books({ title }) {
   const [loading, setLoading] = useState(true);
   const [books, setBooks] = useState([]);
@@ -16,17 +15,14 @@ function Books({ title }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('/books');
-        setBooks(response.data);
+    try {
+      const path = 'books';
+      fetchData(path, setBooks);
       } catch (error) {
         console.error(error);
       } finally {
         setLoading(false);
       }
-    };
-    fetchData();
   }, []);
 
   useEffect(() => {
