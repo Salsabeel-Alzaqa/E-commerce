@@ -58,10 +58,13 @@ const SignUp = () => {
           axios.post('/carts', {
             userId: userResponse.data.id,
             products: [],
+            items: 0,
+            alltotal: 0
           }),
           axios.post('/wishlists', {
             userId: userResponse.data.id,
             products: [],
+            items: 0
           })
         ]);
       resetForm();
