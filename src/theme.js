@@ -15,7 +15,7 @@ const theme = createTheme({
         },
         secondary: {
             main: '#000000',
-            last:'#D9D9D9'
+            sec:'#D9D9D9'
            
         },
         customColor: {
