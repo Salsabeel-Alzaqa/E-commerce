@@ -2,11 +2,14 @@ import React, { useRef , useState , createContext  } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Carousel.css";
+import styles from "../Trending/Trending.module.css";
+import { Box } from "@mui/material";
 import NextButton from "../NextButton";
 import PrevButton from "../PrevButton";
+
 export const SliderContext = createContext();
-const Carousel = ({ children, dote, show, initial ,center , Rshow ,Rarrow , arrows}) => {
+
+const TrendingCarousel = ({ children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const customeSlider = useRef();
    const goToNext = () => {
@@ -16,39 +19,37 @@ const Carousel = ({ children, dote, show, initial ,center , Rshow ,Rarrow , arro
     customeSlider.current.slickPrev();
   };
   const settings = {
-    dots: dote,
-    className: "center",
-    centerMode: center,
-    slidesToShow: show,
+    dots: false,
+    className: styles.center,
+    centerMode: true,
+    slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
-    initialSlide: initial,
-    nextArrow: arrows && <NextButton next={goToNext} />,
-    prevArrow: arrows && <PrevButton prev={goToPrev} />,
+    centerPadding: '0px',
+    initialSlide: 0,
+    nextArrow:<NextButton next={goToNext} classname={styles.next} />,
+    prevArrow:<PrevButton prev={goToPrev} classname={styles.prev} />,
     beforeChange: (current, next) => setCurrentSlide(next),
     responsive: [
       {
         breakpoint: 800,
         settings: {
-          dots: dote,
-          centerMode: center,
-          slidesToShow:Rshow,
+          dots: false,
+          arrows: false,
           slidesToScroll: 1,
           infinite: true,
-          nextArrow:Rarrow && <NextButton next={goToNext} />,
-          prevArrow: Rarrow && <PrevButton prev={goToPrev} />,
         }
       }
     ]
   };
   return (
-    <>
+    <Box className={styles.trendingSlider}>
       <SliderContext.Provider value={{ currentSlide }}>
-        <Slider {...settings} ref={customeSlider}>
-        {children}
-          </Slider>
+        <Slider {...settings} ref={customeSlider} >
+          {children}
+        </Slider>
       </SliderContext.Provider>
-    </>
+    </Box>
   );
 }
-export default Carousel;
+export default TrendingCarousel;
