@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { SliderContext } from "../../TrendingCarousel";
+import { SliderContext } from "../../Carousel";
 import { Box, Rating, useMediaQuery } from "@mui/material";
-import styles from "../Trending.module.css";
+import styles from "../../Carousel/Carousel.module.css";
 
 function TrendingCard({ image, rate, index }) {
   
