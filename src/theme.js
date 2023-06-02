@@ -49,8 +49,8 @@ const theme = createTheme({
         },
         secondary: {
             main: '#000000',
-            sec:'#D9D9D9'
-           
+            sec:'#D9D9D9',
+            last:'#BC0A0A',
         },
         customColor: {
             main: '#FAFAFA',

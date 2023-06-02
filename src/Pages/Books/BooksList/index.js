@@ -20,7 +20,7 @@ const BooksList = ({image , Genre , author , bestseller ,rating , name ,descript
     return (
         <Grid container spacing={0}>
             <Grid item xs={12} sm={4}>
-                <BookImage image={image} />
+                <BookImage image={image} id={id} />
             </Grid>
             <Grid item xs={12} sm={4}>
                 <Grid container spacing={2} >

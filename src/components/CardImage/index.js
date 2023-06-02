@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
-import ReadMore from "../../../components/ReadMore";
+import ReadMore from "../ReadMore";
 import Box from "@mui/material/Box";
 
-const Image = styled("img")({
-   height:'100%',
-  width: "193px",
-  left: "37px",
-  borderRadius: "10px",
-});
+const StyledCardMedia = styled('img')(({ theme }) => ({
+    borderRadius: "5px",
+    height: '190px',
+    width: '100%',
+    '@media (max-width: 300px)': {
+        height: '100%',
+        width: '100%',
+  }
+}));
 
 const StyledBox = styled(Box)(() => ({
   position: "relative",
@@ -16,7 +19,7 @@ const StyledBox = styled(Box)(() => ({
 }));
 
 
-const BookImage = ({ image , id }) => {
+const CardImage = ({ image , id }) => {
   const [showButton, setShowButton] = useState(false);
 
    const handleMouseEnter = () => {
@@ -30,10 +33,10 @@ const BookImage = ({ image , id }) => {
   return (
     <StyledBox onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
-      <Image src={image} />
+      <StyledCardMedia src={image} />
       {showButton && <ReadMore id={id} />}
     </StyledBox>
   );
 }
 
-export default BookImage;
+export default CardImage;
