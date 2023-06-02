@@ -1,5 +1,4 @@
 import axios from "../axios";
-import {calculateTotal , calculateTotalDiscountPercentage} from "../utils/cartUtils"
 
 export const fetchData = async (path,updateData) => {
   try {
@@ -17,6 +16,14 @@ export const updateData = async (path, updatedData) => {
         await axios.put(path, updatedData, {
             headers: { 'Content-Type': 'application/json' },
         });
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+export const deleteData = async (path) => {
+    try {
+        await axios.delete(path);
     } catch (error) {
         console.error(error);
     }

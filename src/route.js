@@ -11,7 +11,7 @@ import Guard, { LoginGuard } from "./Pages/Guard";
 import SignUp from "./Pages/SignUp";
 import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
-
+import Profile from "./Pages/Profile";
 
 const Router = () => {
   return (
@@ -28,6 +28,7 @@ const Router = () => {
           <Route path="/sales" element={<Guard><Books title="FLASH SALE"/></Guard>} />
           <Route path="/bestseller" element={<Guard><Books title="BEST SELLER" /></Guard>} />
           <Route path="/cart" element={<Guard><Cart /></Guard>} />
+          <Route path="/profile" element={<Guard><Profile /></Guard>} />
           </Route>
         <Route
           path="/login"
