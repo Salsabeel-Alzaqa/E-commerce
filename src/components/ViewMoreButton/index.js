@@ -1,17 +1,20 @@
 import React from "react";
 import { Box , Button } from '@mui/material';
 import { useNavigate } from "react-router-dom";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-const ViewMoreButton = ({path}) => {
+const ViewMoreButton = ({path , text , icon}) => {
     const navigate = useNavigate();
     const handleClick = () => {
         navigate(path);
     };
     return (
         <Box justifyContent="center" display="center" mb={3}>
-            <Button  variant="contained" onClick={handleClick}>
-                View More <ArrowForwardIcon />
-            </Button>
+            {icon ?
+                <Button variant="contained" onClick={handleClick}>
+                    {text} {icon}
+                </Button> : <Button variant="contained" onClick={handleClick}>
+                    {text} 
+                </Button>
+}
         </Box>
     );
 }

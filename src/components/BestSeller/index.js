@@ -5,6 +5,7 @@ import BooksCard from "../BooksCard";
 import styles from "../Carousel/Carousel.module.css";
 import Title from "../Title";
 import ViewMoreButton from "../ViewMoreButton";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const BestSeller = ({ books }) => {
   return (
@@ -21,7 +22,7 @@ const BestSeller = ({ books }) => {
           ))}
         </Carousel>
       </Box>
-      <ViewMoreButton path="/bestseller" />
+      <ViewMoreButton path="/bestseller" text='View More' icon= {<ArrowForwardIcon />} />
     </Container>
   );
 };
