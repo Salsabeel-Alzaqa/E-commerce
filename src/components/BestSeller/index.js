@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "../Carousel";
 import { Box, Container } from '@mui/material';
-import BestSellerCard from "../BestSellerCard";
+import BooksCard from "../BooksCard";
 import styles from "../Carousel/Carousel.module.css";
 import Title from "../Title";
 import ViewMoreButton from "../ViewMoreButton";
@@ -16,7 +16,7 @@ const BestSeller = ({ books }) => {
         <Carousel nextClass={styles.bestNext} prevClass={styles.bestPrev} center={false} show={3} resShow={1} resArrows={true} dots={true} dotsClass={styles.bestDots} resDots={false} row={1} resRow={1} scrollSlideNum={3} sliderClass={styles.cardSlider}>
           {books.map((book) => (
             <Box key={book.id}>
-              <BestSellerCard {...book} />
+              <BooksCard {...book} />
             </Box>
           ))}
         </Carousel>

@@ -38,7 +38,7 @@ const StyledDis = styled(Box)(({ theme }) => ({
     textAlign: 'center',
     color:'white'
 }));
-function BestSellerCard({ image, name, author, price, discount, bestseller, Genre, rating, id, description }) {
+function BooksCard({ image, name, author, price, discount, bestseller, Genre, rating, id, description }) {
     let priceAfterDiscount = price - (price * (discount / 100));
     return (
         <StyledCard>
@@ -93,4 +93,4 @@ function BestSellerCard({ image, name, author, price, discount, bestseller, Genr
         </StyledCard>
     );
 }
-export default BestSellerCard;
+export default BooksCard;
