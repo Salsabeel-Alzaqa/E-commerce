@@ -70,7 +70,7 @@ function UserFavorite() {
             ))}
           />
         ) : (
-          <Box justifyContent="center" display="center" mb={3}>
+          <Box justifyContent="center" display="flex" mb={3}>
             <ViewMoreButton path="/books" text='Go and add some books' icon={<EmojiEmotionsIcon />} />
           </Box>
         )}</Box>
