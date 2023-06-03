@@ -18,7 +18,7 @@ function Books({ title }) {
 
   useEffect(() => {
     try {
-      const path = 'books';
+      const path = '/books';
       fetchData(path, setBooks);
     } catch (error) {
       console.error(error);
