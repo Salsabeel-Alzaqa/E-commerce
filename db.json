@@ -1559,18 +1559,19 @@
   ],
   "users": [
     {
-      "id": 1,
-      "fullName": "salsabeel alzaqa",
+      "fullName": "salsabeel",
       "email": "salsabeel.alzaqa@gmail.com",
       "password": "salsabeel",
-      "phone": "+970595822464"
+      "phone": "0595822464",
+      "id": 1
     }
   ],
   "carts": [
     {
       "id": 1,
       "userId": "1",
-      "products": [],
+      "products": [
+      ],
       "items": 0,
       "subtotal": 0,
       "totaldiscount": 0,

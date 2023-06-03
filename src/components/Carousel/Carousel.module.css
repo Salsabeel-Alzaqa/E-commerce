@@ -1,0 +1,143 @@
+.cardSlider {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.trendingSlider .active {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    transform: scale(1.25);
+    margin-bottom: 20px;
+}
+
+.trendingSlider .sliderList {
+    height: 70%;
+    padding: 50px 0% !important;
+    text-align: center;
+    z-index: 1;
+}
+
+.trendingSlider .sliderList img {
+    width: 100%;
+    height: 100%;
+}
+
+.trendingSlider .next {
+    position: absolute;
+    left: 97%;
+    bottom: 50%;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.trendingSlider .prev {
+    position: absolute;
+    top: 45%;
+    right: 97%;
+    z-index: 3;
+    cursor: pointer;
+}
+.cardSlider .bestDots {
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 20px 0;
+    top:0%;
+    left:40%;
+}
+
+.flashSlider .flashDots{
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    bottom: 0%;
+    left: 30%;
+}
+.cardSlider .bestDots li ,
+ .flashSlider .flashDots li
+  {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.cardSlider .bestDots li button {
+    font-size: 10px;
+    text-indent: -9999px;
+    color: white;
+    border: none;
+    background: #8145ce;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.flashSlider .flashDots li button {
+    font-size: 10px;
+    text-indent: -9999px;
+    color: white;
+    border: none;
+    background: #fdfdfd;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cardSlider .bestDots li button:before {
+    content: "";
+    color: #8145ce;
+    opacity: 0.3;
+}
+
+.flashSlider .flashDots li button:before {
+    content: "";
+    color: #111010;
+    opacity: 0.3;
+}
+.cardSlider .bestDots .slick-active li button::before {
+    color: #000000;
+}
+.cardSlider .bestNext ,.favSlider .favNext{
+    right:0;
+    position: absolute;
+    top:0%;
+    cursor: pointer;
+}
+.cardSlider .bestPrev ,.favSlider .favPrev ,.flashSlider .flashNext , .flashSlider .flashPrev {
+    cursor: pointer;
+}
+.flashSlider
+{
+    position: relative;
+    display:inline-block;
+    width:100%;
+    z-index:1;
+    overflow: hidden;
+}
+.flashSlider .flashNext{
+    position: absolute;
+    right:1%;
+    bottom:40%;
+    z-index:2;
+}
+.flashSlider .flashPrev {
+    position: absolute;
+    top: 50%;
+    left:0%;
+    z-index: 2;
+}
+.flashSlider .flashList{
+    padding-top: 2%;
+    padding-left:10%;
+    padding-right: 5%;
+    margin-bottom: 10%;
+}
+@media only screen and (max-width: 1000px) {
+    .flashSlider .flashList {
+            padding-left: 0%;
+            padding-right: 0%;
+        }
+}

@@ -1,43 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Carousel from "../Carousel";
 import { Box , Container } from "@mui/material";
-import axios from "../../axios";
 import TrendingCard from "./TrendingCard";
 import Title from "../Title";
-import "./Carousel.css";
 import { styled } from "@mui/system";
+import styles from "../Carousel/Carousel.module.css";
 
 const TrendingContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#D9D9D9",
   borderRadius: "0 0 180px 180px",
   marginBottom: theme.spacing(5),
+  margingTop: theme.spacing(5),
+  '@media (max-width: 800px)': {
+    borderRadius: "0 0 100px 100px"
+  }
 }));
-const Trending = () => {
-  const [books, setBooks] = useState([]);
-    useEffect(() => {
-    const fetchBooks = async () => {
-      try {
-        const response = await axios.get('/books');
-        setBooks(response.data);
-      } catch (error) {
-        console.error('Error fetching book data:', error);
-      }
-    };
-    fetchBooks();
-    }, []);
-    const filteredArray = books.filter(obj => obj.trending === true);
-    return (
-        <TrendingContainer>
-            <Title text="TRENDING THIS WEEK" />
-                <Container maxWidth="sm">
-          <Carousel show={3} initial={0} center={true} arrows={true} Rarrow={false} Rshow={3}>
-                        {filteredArray.map((item,index) => (
-                            <Box key={index}>
-                                {item.trending && (<TrendingCard image={item.image} rate={item.rating.rate} index={index} />)}
-                            </Box>))}
-                    </Carousel>
-                </Container>
-        </TrendingContainer>
-    );
+
+const Trending = ({ books }) => {
+  return (
+    <TrendingContainer>
+      <Box textAlign="center" my={5}>
+        <Title text="TRENDING THIS WEEK" />
+      </Box>
+      <Container maxWidth="md">
+          <Carousel nextClass={styles.next} prevClass={styles.prev} center={true} show={3} resShow={3} resArrows={false} dots={false} dotsClass='' resDots={false} row={1} resRow={1} scrollSlideNum={1} sliderClass={styles.trendingSlider} >
+            {books.map((item, index) => (
+              <Box key={index} className={styles.sliderList}>
+                {item.trending && (<TrendingCard image={item.image} rate={item.rating.rate} index={index} />)}
+              </Box>))}
+          </Carousel>
+      </Container>
+    </TrendingContainer>
+  );
 }
 export default Trending;

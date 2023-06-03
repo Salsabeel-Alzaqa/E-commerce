@@ -19,3 +19,11 @@ export const updateData = async (path, updatedData) => {
         console.error(error);
     }
 };
+
+export const deleteData = async (path) => {
+    try {
+        await axios.delete(path);
+    } catch (error) {
+        console.error(error);
+    }
+};

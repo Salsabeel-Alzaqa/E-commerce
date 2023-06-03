@@ -2,14 +2,13 @@ import { styled } from "@mui/system";
 import { Typography } from "@mui/material";
 import React from "react";
 const StyledTypography = styled(Typography)`
-  font-size: 28px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 700;
-  text-transform: uppercase;
 `;
-function Title({ text }) {
+function SubTitle({ text }) {
     return (
-        <StyledTypography variant="h6">{text}</StyledTypography>
+        <StyledTypography >{text}</StyledTypography>
     );
 }
-export default Title;
+export default SubTitle;
