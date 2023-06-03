@@ -1571,154 +1571,19 @@
       "id": 1,
       "userId": "1",
       "products": [
-        {
-          "id": 1,
-          "name": "Never Lie",
-          "author": "Freida McFadden",
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661428846i/62080187.jpg",
-          "price": 9.95,
-          "discount": 50,
-          "quantity": 1,
-          "total": 9.95
-        },
-        {
-          "id": 2,
-          "name": "Run on Red",
-          "author": "Noelle W. Ihli",
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1656767791i/61381555.jpg",
-          "price": 9.5,
-          "discount": 30,
-          "quantity": 3,
-          "total": 28.5
-        },
-        {
-          "id": 3,
-          "name": "It",
-          "author": "Stephen King ",
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334416842i/830502.jpg",
-          "price": 10.95,
-          "discount": 0,
-          "quantity": 1,
-          "total": 10.95
-        }
       ],
-      "items": 5,
-      "subtotal": 49.400000000000006,
-      "totaldiscount": 27.378542510121456,
-      "alltotal": 35.87500000000001
+      "items": 0,
+      "subtotal": 0,
+      "totaldiscount": 0,
+      "alltotal": 0
     }
   ],
   "wishlists": [
     {
       "id": 1,
       "userId": "1",
-      "products": [
-        {
-          "name": "Run on Red",
-          "author": "Noelle W. Ihli",
-          "rating": {
-            "stars": {
-              "five": 24,
-              "four": 38,
-              "three": 28,
-              "two": 7,
-              "one": 1
-            },
-            "rate": 3.77,
-            "count": "18,659"
-          },
-          "id": 2,
-          "price": 9.5,
-          "discount": 30,
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1656767791i/61381555.jpg",
-          "description": "A rural country road. No cell signal for miles. A terrifying game of cat-and-mouse.By the time Laura and Olivia notice the headlights tailing them through the hills, it’s too late. What seems, at first, like a case of road rage quickly unfolds into a heart-pounding chase—and a battle for survival.Who are the men in the truck? What do they want? And can Laura and Olivia outrun—and outsmart—them long enough to call for help, even if it means taking their chances in the hills on foot?As their situation grows more perilous, the girls realize that the real terror has only just begun. But flight won’t save them from their pursuers. If they’re going to make it home alive, they'll have to fight.",
-          "Genre": "horror"
-        },
-        {
-          "name": "It",
-          "author": "Stephen King ",
-          "rating": {
-            "stars": {
-              "five": 51,
-              "four": 29,
-              "three": 13,
-              "two": 3,
-              "one": 1
-            },
-            "rate": 4.25,
-            "count": "1,026,936"
-          },
-          "id": 3,
-          "price": 10.95,
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334416842i/830502.jpg",
-          "description": "It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real. They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But none of them can withstand the force that has drawn them back to Derry to face the nightmare without an end, and the evil without a name.",
-          "Genre": "horror"
-        },
-        {
-          "name": "Never Lie",
-          "author": "Freida McFadden",
-          "rating": {
-            "stars": {
-              "five": 43,
-              "four": 37,
-              "three": 14,
-              "two": 2,
-              "one": 1
-            },
-            "rate": 4.21,
-            "count": "85,547"
-          },
-          "id": 1,
-          "price": 9.95,
-          "discount": 50,
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661428846i/62080187.jpg",
-          "description": "But when they visit the remote manor that once belonged to Dr. Adrienne Hale, a renowned psychiatrist who vanished without a trace four years earlier, a violent winter storm traps them at the estate… with no chance of escape until the blizzard comes to an end.In search of a book to keep her entertained until the snow abates, Tricia happens upon a secret room. One that contains audio transcripts from every single patient Dr. Hale has ever interviewed. As Tricia listens to the cassette tapes, she learns about the terrifying chain of events leading up to Dr. Hale’s mysterious disappearance.",
-          "Genre": "horror"
-        },
-        {
-          "name": "Carrie",
-          "author": "Stephen King ",
-          "rating": {
-            "stars": {
-              "five": 34,
-              "four": 26,
-              "three": 23,
-              "two": 4,
-              "one": 1
-            },
-            "rate": 3.98,
-            "count": "662,961"
-          },
-          "id": 4,
-          "price": 9.95,
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1166254258i/10592.jpg",
-          "bestseller": false,
-          "description": "A modern classic, Carrie introduced a distinctive new voice in American fiction -- Stephen King. The story of misunderstood high school girl Carrie White, her extraordinary telekinetic powers, and her violent rampage of revenge, remains one of the most barrier-breaking and shocking novels of all time.",
-          "Genre": "horror"
-        },
-        {
-          "name": "The Shining",
-          "author": "Stephen King ",
-          "rating": {
-            "stars": {
-              "five": 50,
-              "four": 32,
-              "three": 12,
-              "two": 2,
-              "one": 1
-            },
-            "rate": 4.26,
-            "count": "1,388,156"
-          },
-          "id": 5,
-          "price": 19.95,
-          "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353277730i/11588.jpg",
-          "bestseller": false,
-          "description": "Jack Torrance's new job at the Overlook Hotel is the perfect chance for a fresh start. As the off-season caretaker at the atmospheric old hotel, he'll have plenty of time to spend reconnecting with his family and working on his writing. But as the harsh winter weather sets in, the idyllic location feels ever more remote...and more sinister. And the only one to notice the strange and terrible forces gathering around the Overlook is Danny Torrance, a uniquely gifted five-year-old.",
-          "Genre": "horror"
-        }
-      ],
-      "items": 5
+      "products": [],
+      "items": 0
     }
   ]
 }

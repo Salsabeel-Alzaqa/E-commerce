@@ -48,7 +48,16 @@
     left:40%;
 }
 
-.cardSlider .bestDots li {
+.flashSlider .flashDots{
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    bottom: 0%;
+    left: 30%;
+}
+.cardSlider .bestDots li ,
+ .flashSlider .flashDots li
+  {
     display: inline-block;
     margin: 0 20px;
 }
@@ -65,12 +74,30 @@
     cursor: pointer;
 }
 
+.flashSlider .flashDots li button {
+    font-size: 10px;
+    text-indent: -9999px;
+    color: white;
+    border: none;
+    background: #fdfdfd;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .cardSlider .bestDots li button:before {
     content: "";
     color: #8145ce;
     opacity: 0.3;
 }
-.cardSlider .slick-dots .bestDots .slick-active li button:before {
+
+.flashSlider .flashDots li button:before {
+    content: "";
+    color: #111010;
+    opacity: 0.3;
+}
+.cardSlider .bestDots .slick-active li button::before {
     color: #000000;
 }
 .cardSlider .bestNext ,.favSlider .favNext{
@@ -79,6 +106,38 @@
     top:0%;
     cursor: pointer;
 }
-.cardSlider .bestPrev ,.favSlider .favPrev {
+.cardSlider .bestPrev ,.favSlider .favPrev ,.flashSlider .flashNext , .flashSlider .flashPrev {
     cursor: pointer;
+}
+.flashSlider
+{
+    position: relative;
+    display:inline-block;
+    width:100%;
+    z-index:1;
+    overflow: hidden;
+}
+.flashSlider .flashNext{
+    position: absolute;
+    right:1%;
+    bottom:40%;
+    z-index:2;
+}
+.flashSlider .flashPrev {
+    position: absolute;
+    top: 50%;
+    left:0%;
+    z-index: 2;
+}
+.flashSlider .flashList{
+    padding-top: 2%;
+    padding-left:10%;
+    padding-right: 5%;
+    margin-bottom: 10%;
+}
+@media only screen and (max-width: 1000px) {
+    .flashSlider .flashList {
+            padding-left: 0%;
+            padding-right: 0%;
+        }
 }
