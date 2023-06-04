@@ -60,8 +60,8 @@ const Carousel = ({
           settings: {
             dots: resDots,
             arrows: resArrows,
-            slidesToShow: center ? resShow :2,
-            slidesToScroll: scrollSlideNum,
+            slidesToShow: center ? 3 :2,
+            slidesToScroll: center ? 1 : resShow,
             infinite: true,
             rows: resRow,
           },
@@ -71,8 +71,8 @@ const Carousel = ({
           settings: {
             dots: resDots,
             arrows: resArrows,
-            slidesToShow: resShow,
-            slidesToScroll: scrollSlideNum,
+            slidesToShow:center ? 3 : resShow,
+            slidesToScroll:center ? 1 : resShow,
             infinite: true,
             rows: resRow,
           },

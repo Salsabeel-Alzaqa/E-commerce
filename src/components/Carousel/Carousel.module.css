@@ -106,7 +106,7 @@
     top:0%;
     cursor: pointer;
 }
-.cardSlider .bestPrev ,.favSlider .favPrev ,.flashSlider .flashNext , .flashSlider .flashPrev {
+.cardSlider .bestPrev ,.favSlider .favPrev ,.flashSlider .flashNext , .flashSlider .flashPrev ,.exploreSlider .exploreNext , .exploreSlider .exploreProv {
     cursor: pointer;
 }
 .flashSlider
@@ -140,4 +140,23 @@
             padding-left: 0%;
             padding-right: 0%;
         }
+}
+.exploreSlider{
+    position: relative;
+    overflow: hidden;
+}
+.exploreSlider .exploreNext{
+    position:absolute;
+    right:0%;
+    top:50%;
+}
+.exploreSlider .explorePrev {
+    position: absolute;
+    left: 0%;
+    bottom: 40%;
+}
+.exploreSlider .exploreList
+{
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
