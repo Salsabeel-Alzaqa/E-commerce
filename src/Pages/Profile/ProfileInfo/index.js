@@ -83,7 +83,7 @@ function ProfileInfo() {
       const { handleSubmit, handleChange, handleBlur, values, touched, errors } = formik;
     return (
         <Container maxWidth="lg">
-            <Box textAlign="center" my={2}>
+            <Box textAlign="center" my={2} sx={{color:'#5A595C'}}>
                 <Title text={`${user.fullName} Profile`} />
             </Box>
             {
@@ -171,16 +171,17 @@ function ProfileInfo() {
                     </Box>
                     <Stack direction="column" spacing={2}>
                         <Stack direction="row" spacing={2}>
-                            <SubTitle text="Name :" />
-                            <Typography variant="body1" >{user.fullName}</Typography>
+                            <Title text="Name : " />
+                             
+                            <SubTitle text={user.fullName} />
                         </Stack>
                         <Stack direction="row" spacing={2}>
-                            <SubTitle text="Email :" />
-                            <Typography variant="body1">{user.email}</Typography>
+                            <Title text="Email : " />
+                            <SubTitle text={user.email} />
                         </Stack>
                         <Stack direction="row" spacing={2}>
-                            <SubTitle text="Phone Number :" />
-                            <Typography variant="body1">{user.phone}</Typography>
+                            <Title text="Phone Number : " />
+                            <SubTitle text={user.phone} />
                         </Stack>
                     </Stack>
                 </>)
