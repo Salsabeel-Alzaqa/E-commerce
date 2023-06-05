@@ -10,7 +10,7 @@ import {  handleRemove } from '../../utils/cartUtils';
 const FavoriteButton = memo(({ name, author, rating, id, price, discount, image, bestseller, description, Genre }) => {
   const [books, setBooks] = useState([]);
   const token = localStorage.getItem("token");
-
+  
   useEffect(() => {
     fetchData(`/wishlists/${token}`,setBooks);
   }, [books]);
@@ -33,11 +33,16 @@ const FavoriteButton = memo(({ name, author, rating, id, price, discount, image,
   };
 
   return (
-    <Button variant='outlined' sx={{ borderColor: "red" }} size='small'>
+  <>
       {isProductInWishlist() ?
-        <FavoriteIcon sx={{ color: "red" }} onClick={handleRemoveItem} />
-        : <FavoriteBorderIcon sx={{ color: "red" }} onClick={handleAdd} />}
-    </Button>
+        <Button variant='outlined' color="error" size='small' onClick={handleRemoveItem}>
+          <FavoriteIcon sx={{ color: "red" }} />
+          </Button>
+        : <Button variant='outlined' color="error" size='small' onClick={handleAdd} >
+          <FavoriteBorderIcon sx={{ color: "red" }} />
+          </Button>
+      }
+    </>
   );
 });
 
