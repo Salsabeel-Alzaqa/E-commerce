@@ -8,9 +8,6 @@ import hero3 from "../assets/hero3.png";
 import delivery from "../assets/Services1.png";
 import customer from "../assets/Services2.png";
 import money from "../assets/Services3.png";
-import hero1 from "../assets/hero.png";
-import hero2 from "../assets/hero2.png";
-import hero3 from "../assets/hero3.png";
 export const data = [
     {
         "id": 1,
@@ -126,9 +123,4 @@ export const genresData = [
     { text: 'crime' },
     { text: 'classics' },
     { text: 'rommance' },
-]
-export const hero = [
-    { image: hero3 , link:"/books" },
-    { image: hero2 , link:"/sales"},
-    { image: hero1 },
 ];

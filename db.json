@@ -1559,11 +1559,11 @@
   ],
   "users": [
     {
-      "id": 1,
-      "fullName": "salsabeel alzaqa",
+      "fullName": "salsabeel",
       "email": "salsabeel.alzaqa@gmail.com",
       "password": "salsabeel",
-      "phone": "+970595822464"
+      "phone": "0595822464",
+      "id": 1
     }
   ],
   "carts": [
