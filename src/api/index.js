@@ -1,5 +1,4 @@
 import axios from "../axios";
-
 export const fetchData = async (path,updateData) => {
   try {
       const response = await axios.get(path);

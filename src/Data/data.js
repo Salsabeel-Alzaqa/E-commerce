@@ -29,8 +29,8 @@ export const data = [
         "title": "Account",
         "body": [
             {
-                "text": "Login/Logout",
-                "link":"",
+                "text": "Logout",
+                "link":"/logout",
             },
             {
                 "text": "Cart",
@@ -88,7 +88,7 @@ export const data = [
     }
 ]
 export const settings = [
-    { text: 'Profile', link: '/Profile' },
+    { text: 'Profile', link: '/profile' },
     { text: 'Cart', link: '/cart' },
     { text: 'Logout', link: '/logout' },
 ];
@@ -107,4 +107,20 @@ export const services = [
     { image: delivery, title: "FREE AND FAST DELIVERY", body: "Free delivery for all orders over $140" },
     { image: customer, title: "24/7 CUSTOMER SERVICE", body: "Friendly 24/7 customer support" },
     { image: money, title: "MONEY BACK GUARANTEE", body: "We reurn money within 30 days" },
+];
+export const cartColumns = [
+    { text: "Items" },
+    { text: "Quantity" },
+    { text: "Price" },
+    { text: "Total" },
+    { text: " " },
+];
+export const genresData = [
+    { text: 'horror' },
+    { text: 'fantasy' },
+    { text: 'manga' },
+    { text: 'psychology' },
+    { text: 'crime' },
+    { text: 'classics' },
+    { text: 'rommance' },
 ];

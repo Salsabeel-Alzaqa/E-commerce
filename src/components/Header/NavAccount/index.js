@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { Link } from 'react-router-dom';
 import { createTheme, Box, Tooltip, Menu, MenuItem, Typography, IconButton } from '@mui/material';
 import { settings } from "../../../Data/data";
 import { useNavigate } from "react-router-dom";
@@ -60,7 +61,7 @@ const NavAccount = () => {
             >
                 {settings.map((setting) => (
                     <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
-                        {setting.text === 'Logout' ? (<Typography textAlign="center" onClick={userLogout}>{setting.text}</Typography>):<Typography textAlign="center">{setting.text}</Typography>}
+                        {setting.text === 'Logout' ? (<Typography textAlign="center" onClick={userLogout}>{setting.text}</Typography>):(<Link to={setting.link} style={{textDecoration: 'none', textAlign:"center" ,color:'black'}}>{setting.text}</Link>)}
                     </MenuItem>
                 ))}
             </Menu>
