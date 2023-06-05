@@ -14,9 +14,6 @@ import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import BookDetails from "./Pages/BookDetails";
-
-
-
 const Router = () => {
   return (
     <BrowserRouter>
@@ -28,6 +25,7 @@ const Router = () => {
             </Guard>
           } />
           <Route path="/about" element={<Guard><About /></Guard>} />
+          <Route path="/profile" element={<Guard><Profile /></Guard>} />
           <Route path="/books" element={<Guard><Books title="BOOKS"/></Guard>} />
           <Route path="/sales" element={<Guard><Books title="FLASH SALE"/></Guard>} />
           <Route path="/bestseller" element={<Guard><Books title="BEST SELLER" /></Guard>} />

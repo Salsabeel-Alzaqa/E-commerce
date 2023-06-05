@@ -171,8 +171,7 @@ function ProfileInfo() {
                     </Box>
                     <Stack direction="column" spacing={2}>
                         <Stack direction="row" spacing={2}>
-                            <Title text="Name : " />
-                             
+                            <Title text="Name : " />                  
                             <SubTitle text={user.fullName} />
                         </Stack>
                         <Stack direction="row" spacing={2}>
