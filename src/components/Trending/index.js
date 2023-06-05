@@ -10,14 +10,13 @@ const TrendingContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#D9D9D9",
   borderRadius: "0 0 180px 180px",
   marginBottom: theme.spacing(5),
-  maringTop: theme.spacing(5),
+  margingTop: theme.spacing(5),
   '@media (max-width: 800px)': {
     borderRadius: "0 0 100px 100px"
   }
 }));
 
 const Trending = ({ books }) => {
-  // const filteredArray = books.filter(obj => obj.trending === true);
   return (
     <TrendingContainer>
       <Box textAlign="center" my={5}>
