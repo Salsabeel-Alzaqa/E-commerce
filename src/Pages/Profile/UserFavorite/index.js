@@ -48,30 +48,32 @@ function UserFavorite() {
         <Title text={books.items === 1 ? `${books.items} book` : `${books.items} books`} />
       </Box>
       <Box mb={5}>
-      {filteredBooks && filteredBooks.length > 0 ? (
-        <Carousel
-          nextClass={styles.favNext}
-          prevClass={styles.favPrev}
-          center={false}
-          show={filteredBooks.length >= 3 ? 3 : filteredBooks.length}
-          resShow={1}
-          resArrows={true}
-          dots={false}
-          dotsClass=" "
-          resDots={false}
-          row={filteredBooks.length > 4 ? 2 : 1}
-          resRow={1}
-          scrollSlideNum={1}
-          sliderClass={styles.favSlider}
-          children={filteredBooks.map((book) => (
-            <Box key={book.id}>
-              <BooksCard {...book} favCard={true} />
-            </Box>
-          ))}
-        />
-      ) : (
-          <ViewMoreButton path="/books" text='Go and add some books' icon= {<EmojiEmotionsIcon />} />
-      )}</Box>
+        {filteredBooks && filteredBooks.length > 0 ? (
+          <Carousel
+            nextClass={styles.favNext}
+            prevClass={styles.favPrev}
+            center={false}
+            show={filteredBooks.length >= 3 ? 3 : filteredBooks.length}
+            resShow={1}
+            resArrows={true}
+            dots={false}
+            dotsClass=" "
+            resDots={false}
+            row={filteredBooks.length > 4 ? 2 : 1}
+            resRow={1}
+            scrollSlideNum={1}
+            sliderClass={styles.favSlider}
+            children={filteredBooks.map((book) => (
+              <Box key={book.id}>
+                <BooksCard {...book} favCard={true} />
+              </Box>
+            ))}
+          />
+        ) : (
+          <Box justifyContent="center" display="center" mb={3}>
+            <ViewMoreButton path="/books" text='Go and add some books' icon={<EmojiEmotionsIcon />} />
+          </Box>
+        )}</Box>
     </Container>
   );
 }

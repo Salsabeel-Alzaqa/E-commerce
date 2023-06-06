@@ -22,7 +22,9 @@ const BestSeller = ({ books }) => {
           ))}
         </Carousel>
       </Box>
-      <ViewMoreButton path="/bestseller" text='View More' icon= {<ArrowForwardIcon />} />
+      <Box justifyContent="center" display="center" mb={3}>
+        <ViewMoreButton path="/bestseller" text='View More' icon={<ArrowForwardIcon />} />
+      </Box>
     </Container>
   );
 };
