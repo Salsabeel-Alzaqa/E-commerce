@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Book Store React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a front-end book store project developed using React. The project provides a user-friendly interface for browsing and purchasing books.
+The website allows users to browse and purchase books, create an account, add books to their cart and wishlist, view book details, manage their profile, and place orders.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User Authentication: Users can log in to their accounts or register if they don't have one.
 
-### `npm start`
+- Home Page: Displays multiple sections, including Bestsellers, Trending Books, Flash Sales, and Explore, showcasing different book categories and promotions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Books List Page: Lists all available books, Users can search for books by title, author name,and filter by genre.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Book Details Page: Provides detailed information about a specific book, including the book's synopsis, author, price, and discount.
+Users can add the book to their cart or wishlist from this page.
 
-### `npm test`
+- Cart and Wishlist: Users can add books to their cart and manage the quantity of each item.
+A wishlist feature allows users to save books for future reference.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Profile Page:
+    
+    1- Displays user information, including name, email, and phone number.
+    
+    2- Users can edit their profile information or delete their account.
 
-### `npm run build`
+    3- Wishlist is displayed on the profile page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Cart Page: Users can review their cart , and send the order .
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- About Page: Provides information about the book store .
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Responsive design: The app is designed to be responsive and optimized for different screen sizes and devices.
 
-### `npm run eject`
+## Installation and Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ 1- Clone the repository.
+ 
+ 2- Install dependencies using npm install.
+ 
+ 3- Start the development server using npm start.
+ 
+ 4- Access the website in your browser at http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the json-server :-
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`json-server --watch db.json --port 8000 --no-automock`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
 
-## Learn More
+## Figma Resource
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Click here to access the Figma resource](https://www.figma.com/file/BzPRWg64YpiaNlMzakCx7m/Book-Store?type=design&node-id=0%3A1&t=plj6BmxtJnB2RXrS-1)
