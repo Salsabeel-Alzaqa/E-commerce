@@ -73,12 +73,12 @@
 .cardSlider .slick-dots .bestDots .slick-active li button:before {
     color: #000000;
 }
-.cardSlider .bestNext{
+.cardSlider .bestNext ,.favSlider .favNext{
     right:0;
     position: absolute;
     top:0%;
     cursor: pointer;
 }
-.cardSlider .bestPrev{
+.cardSlider .bestPrev ,.favSlider .favPrev {
     cursor: pointer;
 }

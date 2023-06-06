@@ -7,6 +7,7 @@ import Stars from '../Stars';
 import AddToCart from '../AddToCart';
 import FavoriteButton from '../FavoriteButton';
 import CardImage from '../CardImage';
+import RemoveButton from '../RemoveButton';
 
 
 const StyledCard = styled(Card)(({ theme }) => ({
@@ -38,7 +39,7 @@ const StyledDis = styled(Box)(({ theme }) => ({
     textAlign: 'center',
     color:'white'
 }));
-function BooksCard({ image, name, author, price, discount, bestseller, Genre, rating, id, description }) {
+function BooksCard({ image, name, author, price, discount, bestseller, Genre, rating, id, description , favCard}) {
     let priceAfterDiscount = price - (price * (discount / 100));
     return (
         <StyledCard>
@@ -85,10 +86,16 @@ function BooksCard({ image, name, author, price, discount, bestseller, Genre, ra
                     }
                     
                 </Box>
-                <Stack direction="row" spacing={3} pt={2}>
-                    <AddToCart image={image} author={author} name={name} price={price} quantity={1} id={id} discount={discount} />
-                    <FavoriteButton name={name} author={author} rating={rating} id={id} price={price} discount={discount} image={image} bestseller={bestseller} description={description} Genre={Genre} />
-                </Stack>
+                {favCard ?
+                    <Stack direction="row" spacing={3} pt={2}>
+                        <AddToCart image={image} author={author} name={name} price={price} quantity={1} id={id} discount={discount} />
+                        <RemoveButton path={'wishlists'} id={id} />
+                    </Stack> :
+                    <Stack direction="row" spacing={3} pt={2}>
+                        <AddToCart image={image} author={author} name={name} price={price} quantity={1} id={id} discount={discount} />
+                        <FavoriteButton name={name} author={author} rating={rating} id={id} price={price} discount={discount} image={image} bestseller={bestseller} description={description} Genre={Genre} />
+                    </Stack>
+                }
             </Stack>
         </StyledCard>
     );

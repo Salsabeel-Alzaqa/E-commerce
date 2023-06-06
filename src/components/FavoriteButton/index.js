@@ -1,4 +1,4 @@
-import React, { useEffect, useState, memo, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "@mui/material";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -7,7 +7,7 @@ import { removeFromWishlist , addToWishlist } from '../../utils/wishlistUtils';
 import {  handleRemove } from '../../utils/cartUtils';
 
 
-const FavoriteButton = memo(({ name, author, rating, id, price, discount, image, bestseller, description, Genre }) => {
+const FavoriteButton = ({ name, author, rating, id, price, discount, image, bestseller, description, Genre }) => {
   const [books, setBooks] = useState([]);
   const token = localStorage.getItem("token");
   
@@ -33,17 +33,17 @@ const FavoriteButton = memo(({ name, author, rating, id, price, discount, image,
   };
 
   return (
-  <>
+    <>
       {isProductInWishlist() ?
         <Button variant='outlined' color="error" size='small' onClick={handleRemoveItem}>
           <FavoriteIcon sx={{ color: "red" }} />
-          </Button>
+        </Button>
         : <Button variant='outlined' color="error" size='small' onClick={handleAdd} >
           <FavoriteBorderIcon sx={{ color: "red" }} />
-          </Button>
+        </Button>
       }
     </>
   );
-});
+};
 
 export default FavoriteButton;
