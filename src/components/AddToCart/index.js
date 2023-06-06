@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@mui/material";
+import { Button , IconButton } from "@mui/material";
 import { fetchData  } from "../../api";
 import SnackbarAlert from "../SnackbarAlert";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { handleRemove , updateCartItem  } from '../../utils/cartUtils.js';
-const AddToCart = ({ image, author, name, price, quantity, id, discount }) => {
+const AddToCart = ({ image, author, name, price, quantity, id, discount , explore}) => {
   const [cart, setCart] = useState([]);
   const [isProductExistsAlertOpen, setProductExistsAlertOpen] = useState(false);
   const token = localStorage.getItem("token");
@@ -62,9 +63,11 @@ const AddToCart = ({ image, author, name, price, quantity, id, discount }) => {
 
   return (
     <>
-      <Button variant="contained" onClick={handleAddToCart} size="small">
+      {explore ? <IconButton variant="contained" onClick={handleAddToCart} size="small">
+        <AddShoppingCartIcon />
+      </IconButton> : <Button variant="contained" onClick={handleAddToCart} size="small">
         Add To Cart
-      </Button>
+      </Button>}
       <SnackbarAlert
         open={isProductExistsAlertOpen}
         onClose={handleAlertClose}

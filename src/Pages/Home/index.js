@@ -4,6 +4,7 @@ import Hero from "../../components/Hero";
 import BestSeller from "../../components/BestSeller";
 import Trending from "../../components/Trending";
 import FlashSale from "../../components/FlashSale";
+import Explore from "../../components/Explore";
 
 function Home() {
   const [books, setBooks] = useState([]);
@@ -19,6 +20,7 @@ function Home() {
       <BestSeller books={bestSellerBooks} />
       <FlashSale books={flashSaleBooks} />
       <Trending books={trendingBooks} />
+      <Explore books={books} />
     </>
   );
 }

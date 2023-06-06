@@ -34,7 +34,7 @@ function DeleteAccount() {
     };
     return (
         <>
-            <Button variant="contained" color="primary" fullWidth onClick={handleShow}>Delete account</Button>
+            <Button variant='outlined' color="error" fullWidth onClick={handleShow}>Delete account</Button>
             <Dialog
                 open={show}
                 onClose={handleClose}

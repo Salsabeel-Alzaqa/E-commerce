@@ -1,9 +1,16 @@
 import React  from "react";
-import { Button, Box} from "@mui/material";
+import { Button, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
-
-function ReadMore({ id }) {
+import FavoriteButton from "../FavoriteButton";
+const FavBox = styled(Box)({
+        position: "absolute",
+        left: "70%",
+        top: "50%",
+        transform: "translate(-50%, -50%)",
+        zIndex: 2,
+    });
+function ReadMore({ id , explore , book}) {
     const StyledButton = styled(Button)({
         position: "absolute",
         top: "50%",
@@ -21,6 +28,10 @@ function ReadMore({ id }) {
             opacity: 1,
             backgroundColor: "black",
         },
+        ...(explore && {
+            left: "30%",
+    }),
+
     });
     const Overlay = styled(Box)({
         position: "absolute",
@@ -32,13 +43,18 @@ function ReadMore({ id }) {
         borderRadius: "10px",
         transition: "opacity 0.3s",
         zIndex: 1,
+        ...(explore && {
+            backgroundColor: "rgba(0, 0, 0, 0.75)",
+
+        }),
     });
 
     return (
-        <Link style={{ textDecoration: "none" }} to={`/books/${id}`}>
-            <StyledButton  variant="contained">Read More</StyledButton>
-            <Overlay> </Overlay>
-        </Link>
+        <><Overlay>
+            <Link to={`/books/${id}`}><StyledButton variant="contained">Read More</StyledButton></Link>
+            {explore && <FavBox><FavoriteButton {...book} /></FavBox>}
+        </Overlay>
+        </>
     );
 }
 export default ReadMore;

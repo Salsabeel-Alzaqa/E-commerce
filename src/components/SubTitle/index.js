@@ -4,11 +4,12 @@ import React from "react";
 const StyledTypography = styled(Typography)`
   font-size: 20px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
+  padding-top:0.5%;
 `;
 function SubTitle({ text }) {
     return (
-        <StyledTypography >{text}</StyledTypography>
+        <StyledTypography>{text} .</StyledTypography>
     );
 }
 export default SubTitle;

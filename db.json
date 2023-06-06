@@ -1570,8 +1570,7 @@
     {
       "id": 1,
       "userId": "1",
-      "products": [
-      ],
+      "products": [],
       "items": 0,
       "subtotal": 0,
       "totaldiscount": 0,
