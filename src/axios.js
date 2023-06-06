@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "http://localhost:8000";
+const baseURL = "https://data-p4sm.onrender.com";
 const axiosInstance = axios.create({
   baseURL,
 });
