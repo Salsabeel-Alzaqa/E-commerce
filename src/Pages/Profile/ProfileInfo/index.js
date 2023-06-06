@@ -179,7 +179,7 @@ function ProfileInfo() {
                             <SubTitle text={user.email} />
                         </Stack>
                         <Stack direction="row" spacing={2}>
-                            <Title text="Phone Number : " />
+                            <Title text="Phone : " />
                             <SubTitle text={user.phone} />
                         </Stack>
                     </Stack>
