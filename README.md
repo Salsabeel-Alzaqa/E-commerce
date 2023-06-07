@@ -41,12 +41,6 @@ A wishlist feature allows users to save books for future reference.
  
  4- Access the website in your browser at http://localhost:3000.
 
-To run the json-server :-
-
-`json-server --watch db.json --port 8000 --no-automock`
-
-Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
-
 ## Figma Resource
 
 [Click here to access the Figma resource](https://www.figma.com/file/BzPRWg64YpiaNlMzakCx7m/Book-Store?type=design&node-id=0%3A1&t=plj6BmxtJnB2RXrS-1)
