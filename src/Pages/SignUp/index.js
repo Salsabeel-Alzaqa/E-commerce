@@ -56,6 +56,7 @@ const SignUp = () => {
         });
         await Promise.all([
           axios.post('/carts', {
+            id:userResponse.data.id,
             userId: userResponse.data.id,
             products: [],
             items: 0,
@@ -64,6 +65,7 @@ const SignUp = () => {
             alltotal: 0
           }),
           axios.post('/wishlists', {
+            id:userResponse.data.id,
             userId: userResponse.data.id,
             products: [],
             items: 0

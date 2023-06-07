@@ -1,11 +1,12 @@
 import React , { useEffect , useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchData } from "../../api";
-import { Container } from '@mui/material';
+import { Container , Box} from '@mui/material';
 import BookInfo from "./BookInfo";
 import AddButton from "./AddButton";
 import RatingDetails from "./RatingDetails";
 import LinkLog from "../../components/LinkLog";
+import BooksSkeleton from "../../components/BooksSkeleton";
 
 function BookDetails() {
     const [book, setBook] = useState({});
@@ -25,7 +26,7 @@ function BookDetails() {
         <>
             <LinkLog />
             <Container maxWidth="xl" my={5}>
-                {loading ? (<>loading</>) :
+                {loading ? (<Box m={5}><BooksSkeleton /></Box>) :
                     (<>
                         <BookInfo {...book} />
                         <AddButton {...book} />
