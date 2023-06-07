@@ -36,9 +36,6 @@ const Carousel = ({
     customeSlider.current.slickPrev();
   }, []);
 
-  const NextButtonMemo = React.memo(NextButton);
-  const PrevButtonMemo = React.memo(PrevButton);
-
   const settings = useMemo(
     () => ({
       dots: dots,
@@ -51,8 +48,8 @@ const Carousel = ({
       centerPadding: center ? "0px" : "",
       initialSlide: 0,
       rows: row,
-      nextArrow: <NextButtonMemo next={goToNext} classname={nextClass} />,
-      prevArrow: <PrevButtonMemo prev={goToPrev} classname={prevClass} />,
+      nextArrow: <NextButton next={goToNext} classname={nextClass} />,
+      prevArrow: <PrevButton prev={goToPrev} classname={prevClass} />,
       beforeChange: center ? (current, next) => setCurrentSlide(next) : null,
       responsive: [
         {
