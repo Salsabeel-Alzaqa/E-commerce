@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 const FooterInfo = ({ text, icon, link }) => {
     const navigate = useNavigate();
+    const token = localStorage.getItem("token");
     const userLogout = () => {
-        localStorage.removeItem("token");
+        if (token) {
+            localStorage.removeItem("token");
+        }
         navigate("/login");
     };
     return (
         <>{text ? (
-            link ? text === 'Logout' ? <Typography variant="body2" color="common.white" component="p" sx={{ py: 1 }} onClick={userLogout}>{text}</Typography>: (<Link style={{ textDecoration: "none" }} to={link}>
+            link ? text === 'Logout' ? <Typography variant="body2" color="common.white" component="p" sx={{ py: 1 }} onClick={userLogout}>{text}/LogIn</Typography>: (<Link style={{ textDecoration: "none" }} to={link}>
                 <Typography variant="body2" color="common.white" component="p" sx={{ py:1}}>
                     {text}
                 </Typography></Link>) : <Typography variant="body2" color="common.white" component="p"  sx={{ py:1}}>

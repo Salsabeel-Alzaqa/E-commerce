@@ -9,7 +9,7 @@ function Guard({ children }) {
 
 export function LoginGuard({ children }) {
   const token = localStorage.getItem("token");
-  if (token) return <Navigate to="/" />;
+  if (token) return <Navigate to="/login" />;
   return <>{children}</>;
 }
 

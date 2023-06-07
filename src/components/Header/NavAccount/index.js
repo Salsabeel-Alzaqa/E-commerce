@@ -18,6 +18,7 @@ const theme = createTheme({
 const NavAccount = () => {
     const [anchorElUser, setAnchorElUser] = useState(null);
     const navigate = useNavigate();
+    const token = localStorage.getItem("token");
    
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
@@ -27,6 +28,9 @@ const NavAccount = () => {
     };
     const userLogout = () => {
         localStorage.removeItem("token");
+        navigate("/login");
+    };
+    const userLogIn = () => {
         navigate("/login");
     };
     return (
@@ -59,11 +63,12 @@ const NavAccount = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
             >
-                {settings.map((setting) => (
+                {token ?
+                    settings.map((setting) => (
                     <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
                         {setting.text === 'Logout' ? (<Typography textAlign="center" onClick={userLogout}>{setting.text}</Typography>):(<Link to={setting.link} style={{textDecoration: 'none', textAlign:"center" ,color:'black'}}>{setting.text}</Link>)}
                     </MenuItem>
-                ))}
+                )) :<MenuItem onClick={handleCloseUserMenu}><Typography textAlign="center" onClick={userLogIn}> LogIn </Typography></MenuItem>}
             </Menu>
         </Box>
     );

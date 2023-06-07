@@ -13,6 +13,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
     borderRadius:'10px'
 }));
 const ExploreCard = ({ book }) => {
+    const token = localStorage.getItem("token");
     const { image, author, name, price, discount, rating, id } = book;
     let priceAfterDiscount = price - (price * (discount / 100));
     return (
@@ -37,7 +38,7 @@ const ExploreCard = ({ book }) => {
             <Grid item xs={12}>
                 <StyledBox >
                     {discount ?<Typography variant="h6" color="secondary.last" >${priceAfterDiscount.toFixed(2)}</Typography>: <Typography variant="h6" >${price}</Typography>}
-                    <AddToCart {...book} quantity={1} explore={true} />
+                    {token ? <AddToCart {...book} quantity={1} explore={true} /> : <></>}
                 </StyledBox>
             </Grid>
         </Grid>

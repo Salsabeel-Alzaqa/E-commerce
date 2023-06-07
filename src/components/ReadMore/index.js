@@ -10,7 +10,8 @@ const FavBox = styled(Box)({
         transform: "translate(-50%, -50%)",
         zIndex: 2,
     });
-function ReadMore({ id , explore , book}) {
+function ReadMore({ id, explore, book }) {
+    const token = localStorage.getItem("token");
     const StyledButton = styled(Button)({
         position: "absolute",
         top: "50%",
@@ -52,7 +53,7 @@ function ReadMore({ id , explore , book}) {
     return (
         <><Overlay>
             <Link to={`/books/${id}`}><StyledButton variant="contained">Read More</StyledButton></Link>
-            {explore && <FavBox><FavoriteButton {...book} /></FavBox>}
+            {token ? explore && <FavBox><FavoriteButton {...book} /></FavBox> : <></>}
         </Overlay>
         </>
     );

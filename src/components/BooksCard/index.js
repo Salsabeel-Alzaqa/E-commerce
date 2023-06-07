@@ -39,7 +39,8 @@ const StyledDis = styled(Box)(({ theme }) => ({
     textAlign: 'center',
     color:'white'
 }));
-function BooksCard({ image, name, author, price, discount, bestseller, Genre, rating, id, description , favCard}) {
+function BooksCard({ image, name, author, price, discount, bestseller, Genre, rating, id, description, favCard }) {
+    const token = localStorage.getItem("token");
     let priceAfterDiscount = price - (price * (discount / 100));
     return (
         <StyledCard>
@@ -86,7 +87,8 @@ function BooksCard({ image, name, author, price, discount, bestseller, Genre, ra
                     }
                     
                 </Box>
-                {favCard ?
+                {token ?
+                  favCard ?
                     <Stack direction="row" spacing={3} pt={2}>
                         <AddToCart image={image} author={author} name={name} price={price} quantity={1} id={id} discount={discount} />
                         <RemoveButton path={'wishlists'} id={id} />
@@ -94,7 +96,9 @@ function BooksCard({ image, name, author, price, discount, bestseller, Genre, ra
                     <Stack direction="row" spacing={3} pt={2}>
                         <AddToCart image={image} author={author} name={name} price={price} quantity={1} id={id} discount={discount} />
                         <FavoriteButton name={name} author={author} rating={rating} id={id} price={price} discount={discount} image={image} bestseller={bestseller} description={description} Genre={Genre} />
-                    </Stack>
+                        </Stack>
+                    :
+                    <></>
                 }
             </Stack>
         </StyledCard>
