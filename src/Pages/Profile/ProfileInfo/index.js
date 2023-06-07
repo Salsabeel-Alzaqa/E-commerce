@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { fetchData,updateData} from "../../../api";
+import { fetchData, updateData } from "../../../api";
+import axios from "../../../axios";
 import Title from "../../../components/Title";
-import { TextField,Box, Button , Container, Stack, Typography} from "@mui/material";
+import { TextField,Box, Button , Container, Stack } from "@mui/material";
 import SubTitle from "../../../components/SubTitle";
 import PasswordField from '../../../components/PasswordField';
 import { useFormik } from "formik";
@@ -9,13 +10,12 @@ import DeleteAccount from "../DeleteAccount";
 
 function ProfileInfo() {
     const [user, setUser] = useState([]);
-    const [newEmail, setNewEmail] = useState([]);
     const [showForm, setShowForm] = useState(false);
     const token = localStorage.getItem("token");
     useEffect(() => {
         const path = `/users/${token}`;
         fetchData(path, setUser);
-    }, [user]);
+    }, [user]);    
     const handleEdit = () => {
         setShowForm(true);
     };
@@ -33,7 +33,7 @@ function ProfileInfo() {
                 phoneNumber: user.phone,
             },
             enableReinitialize: true,
-            validate: (values) => {
+            validate: async (values) => {
                 const errors = {};
                 if (!values.fullName) {
                     errors.fullName = 'Full name is required';
@@ -42,6 +42,16 @@ function ProfileInfo() {
                     errors.email = 'Email is required';
                 } else if (!/\S+@\S+\.\S+/.test(values.email)) {
                     errors.email = 'Invalid email address';
+                }
+                else {
+                    try {
+                        const response = await axios.get(`/users?email=${values.email}`);
+                        if (response.data.length > 0 && values.email !== user.email) {
+                            errors.email = 'Email already exists';
+                        }
+                    } catch (error) {
+                        console.error('Email validation error:', error);
+                    }
                 }
                 if (!values.password) {
                     errors.password = 'Password is required';
@@ -58,14 +68,6 @@ function ProfileInfo() {
             },
             onSubmit: (values, { setFieldError }) => {
                 try {
-                    const path = `/users?email=${values.email}`;
-                    fetchData(path, setNewEmail);
-                    if (newEmail.length > 0) {
-                        if (newEmail.email !== user.email) {
-                            setFieldError("email", "Email already exists");
-                            return;
-                        }
-                    }
                     const updatedData =
                     {
                         fullName: values.fullName,
