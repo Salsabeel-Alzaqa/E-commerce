@@ -13,24 +13,19 @@ const ItemQuantity = ({ itemQuantity, id, name, author, image, price, discount }
   }, [cart]);
 
   useEffect(() => {
-      if (cart && cart.products) {
-          update(handleRemove(cart, id));
-      }
+    if (cart && cart.products) {
+      updateCartItem(
+        token,
+        id,
+        name,
+        author,
+        image,
+        price,
+        discount,
+        quantity,
+        handleRemove(cart, id)); 
+    }
   }, [quantity]);
-
-  const update = updatedProducts => {
-    updateCartItem(
-      token,
-      id,
-      name,
-      author,
-      image,
-      price,
-      discount,
-      quantity,
-      updatedProducts
-    );
-  };
 
   const increaseQuantity = useCallback(() => {
     setQuantity(prevQuantity => prevQuantity + 1);

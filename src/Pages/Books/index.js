@@ -90,7 +90,7 @@ function Books({ title }) {
             {displayedBooks.map((item) => {
               return (
                 <Box key={item.id} mb={4}>
-                  <BooksListMemoized {...item} />
+                  <BooksList {...item} />
                 </Box>
               );
             })}
@@ -105,6 +105,4 @@ function Books({ title }) {
     </>
   );
 }
-
-const BooksListMemoized = React.memo(BooksList);
 export default Books;

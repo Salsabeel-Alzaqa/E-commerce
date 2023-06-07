@@ -15,7 +15,7 @@ function ProfileInfo() {
     useEffect(() => {
         const path = `/users/${token}`;
         fetchData(path, setUser);
-    }, [user]);    
+    }, [user,token]);    
     const handleEdit = () => {
         setShowForm(true);
     };

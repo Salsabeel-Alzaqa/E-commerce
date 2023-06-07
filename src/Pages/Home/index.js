@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
 import Hero from "../../components/Hero";
 import BestSeller from "../../components/BestSeller";
 import Trending from "../../components/Trending";
@@ -8,8 +10,16 @@ import Explore from "../../components/Explore";
 
 function Home() {
   const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetchData('/books',setBooks);
+    try {
+      const path = '/books';
+      fetchData(path, setBooks);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   }, []);
   const trendingBooks = books.filter(obj => obj.trending === true);
   const bestSellerBooks = books.filter((book) => book.bestseller === true);
@@ -17,10 +27,20 @@ function Home() {
   return (
     <>
       <Hero />
-      <BestSeller books={bestSellerBooks} />
-      <FlashSale books={flashSaleBooks} />
-      <Trending books={trendingBooks} />
-      <Explore books={books} />
+      {loading ?
+        <Backdrop
+          sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={loading}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop> :
+        <>
+          <BestSeller books={bestSellerBooks} />
+          <FlashSale books={flashSaleBooks} />
+          <Trending books={trendingBooks} />
+          <Explore books={books} />
+        </>
+      }
     </>
   );
 }

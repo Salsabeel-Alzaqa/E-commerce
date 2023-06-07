@@ -1,78 +1,57 @@
 import React, { useEffect, useState } from "react";
-import { Button , IconButton } from "@mui/material";
-import { fetchData  } from "../../api";
+import { Button, IconButton } from "@mui/material";
+import { fetchData } from "../../api";
 import SnackbarAlert from "../SnackbarAlert";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { handleRemove , updateCartItem  } from '../../utils/cartUtils.js';
-const AddToCart = ({ image, author, name, price, quantity, id, discount , explore}) => {
+import { handleRemove, updateCartItem } from '../../utils/cartUtils.js';
+
+const AddToCartSnackbarAlert = ({ open, onClose, name }) => {
+  return (
+    <SnackbarAlert
+      open={open}
+      onClose={onClose}
+      message={`Great choice! ${name} is now in your cart!`}
+    />
+  );
+};
+
+const AddToCart = ({ image, author, name, price, quantity, id, discount, explore }) => {
   const [cart, setCart] = useState([]);
   const [isProductExistsAlertOpen, setProductExistsAlertOpen] = useState(false);
   const token = localStorage.getItem("token");
+  let itemQuantity = quantity;
 
   useEffect(() => {
-    fetchData(`/carts/${token}`,setCart);
+    fetchData(`/carts/${token}`, setCart);
   }, [cart]);
 
-  const isProductInCart = () => {
-    if (!Array.isArray(cart.products)) {
-      return false;
+  const handleAddToCart = () => {
+    const existingProduct = cart.products.find((product) => product.id === id);
+    if (existingProduct) {
+      const updatedQuantity = existingProduct.quantity + itemQuantity;
+      updateCartItem(token, id, name, author, image, price, discount, updatedQuantity, handleRemove(cart, id));
+    } else {
+      updateCartItem(token, id, name, author, image, price, discount, itemQuantity, cart.products);
     }
-     const foundObject = cart.products.find(obj => obj.id === id);
-  return foundObject ? foundObject.quantity : false;
-    
+    setProductExistsAlertOpen(true);
   };
 
-  const handleAddToCart = () => {
-    if (isProductInCart() !== false) {
-      setProductExistsAlertOpen(true);
-      let itemQuantity = isProductInCart();
-      update(handleRemove(cart, id), itemQuantity);
-    }
-    else {
-      if (cart && cart.products) {
-        updateCartItem(
-          token,
-          id,
-          name,
-          author,
-          image,
-          price,
-          discount,
-          quantity,
-          cart.products
-        );
-      }
-    }
-};
-  const update = (updatedProducts,itemQuantity) => {
-    updateCartItem(
-      token,
-      id,
-      name,
-      author,
-      image,
-      price,
-      discount,
-      itemQuantity+quantity,
-      updatedProducts
-    );
-  };
   const handleAlertClose = () => {
     setProductExistsAlertOpen(false);
   };
 
   return (
     <>
-      {explore ? <IconButton variant="contained" onClick={handleAddToCart} size="small">
-        <AddShoppingCartIcon />
-      </IconButton> : <Button variant="contained" onClick={handleAddToCart} size="small">
-        Add To Cart
-      </Button>}
-      <SnackbarAlert
-        open={isProductExistsAlertOpen}
-        onClose={handleAlertClose}
-        message={`Product already exists in the cart.Now you have ${isProductInCart()} ^o^`}
-      />
+      {explore ? (
+        <IconButton variant="contained" onClick={handleAddToCart} size="small">
+          <AddShoppingCartIcon />
+        </IconButton>
+      ) : (
+        <Button variant="contained" onClick={handleAddToCart} size="small">
+          Add To Cart
+        </Button>
+      )}
+      <AddToCartSnackbarAlert open={isProductExistsAlertOpen} onClose={handleAlertClose} name={name} />
     </>
   );
 };
