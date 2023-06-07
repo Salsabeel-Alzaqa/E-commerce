@@ -11,8 +11,13 @@ const Footer = () => {
                 py: 4,
             }}
         >
-            <Grid container spacing={3} >
-                <Grid item xs={12} sm={6} md={3} >
+            <Grid container spacing={3}
+                sx={{
+                    "@media (max-width: 600px)": {
+                        textAlign: "center",
+                    },
+                }}>
+                <Grid item xs={12} sm={6} md={3}>
                     <Typography variant="h5" color="common.white" gutterBottom px={3}>
                         THE BOOK HOUSE
                     </Typography>
@@ -33,7 +38,7 @@ const Footer = () => {
                 })
                 }
                 <Grid item xs={12}>
-                    <Divider  />
+                    <Divider />
                     <Typography variant="body2" color="customColor.last" textAlign="center" pt={2}>
                         © {new Date().getFullYear()} The Book House. All rights reserved.
                     </Typography>
