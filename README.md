@@ -40,6 +40,8 @@ A wishlist feature allows users to save books for future reference.
  3- Start the development server using npm start.
  
  4- Access the website in your browser at http://localhost:3000.
+ 
+ 5- Data: [Click here](https://github.com/Salsabeel-Alzaqa/project_data) / [json server](https://data-p4sm.onrender.com)
 
 ## Figma Resource
 
