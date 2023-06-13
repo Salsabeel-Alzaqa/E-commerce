@@ -31,6 +31,20 @@ A wishlist feature allows users to save books for future reference.
 
 - Responsive design: The app is designed to be responsive and optimized for different screen sizes and devices.
 
+-------------------------------
+
+## AWS Deployment
+
+The E-commerce application is deployed on AWS using :
+
+- Amazon EC2 for hosting the application.
+
+To access the deployed application :
+
+ - [Click here](http://13.48.59.90/)
+
+
+
 ## Installation and Usage
 
  1- Clone the repository.
