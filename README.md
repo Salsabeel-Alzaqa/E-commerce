@@ -2,7 +2,7 @@
 
 This is a front-end book store project developed using React. The project provides a user-friendly interface for browsing and purchasing books.
 The website allows users to browse and purchase books, create an account, add books to their cart and wishlist, view book details, manage their profile, and place orders.
-
+ - [Demo](https://book-store-f8g4.onrender.com)
 ## Features
 
 - User Authentication: Users can log in to their accounts or register if they don't have one.
